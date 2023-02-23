@@ -14,10 +14,10 @@ function App() {
         <Router>
           <TopNavbar />
           <Routes>
-            <Route path="/" element={<Landing />}/>
-            <Route path="/profil" element={<Profile />} />
-            <Route path="/dokter" element={<Dokter />} />
-            <Route path="/artikel" element={<ArtikelIndex />} />
+            <Route path="/clinic-app/" element={<Landing />}/>
+            <Route path="/clinic-app/profil" element={<Profile />} />
+            <Route path="/clinic-app/dokter" element={<Dokter />} />
+            <Route path="/clinic-app/artikel" element={<ArtikelIndex />} />
           </Routes>
           <Footer/>
         </Router>

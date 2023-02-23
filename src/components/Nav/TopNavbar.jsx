@@ -64,12 +64,12 @@ export default function TopNavbar() {
           </div>
           
           <Popover.Group className="hidden lg:flex lg:gap-x-12 lg:pr-30">
-            <Link to={"/home"}>
+            <Link to={"/clinic-app/home"}>
               <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
                 Home
               </a>
             </Link>
-            <Link to={"/profil"}>
+            <Link to={"/clinic-app/profil"}>
               <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
                 Profil
               </a>
@@ -126,12 +126,12 @@ export default function TopNavbar() {
               </Transition>
             </Popover>
             
-            <Link to={"/dokter"}>
+            <Link to={"/clinic-app/dokter"}>
               <a href="/dokter" className="text-sm font-semibold leading-6 text-gray-900">
                 Dokter
               </a>
             </Link>
-            <Link to={"/artikel"}>
+            <Link to={"/clinic-app/artikel"}>
               <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
                 Artikel Kesehatan
               </a>
