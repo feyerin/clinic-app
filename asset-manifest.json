@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/clinic-app/static/css/main.8e0f0693.css",
+    "main.js": "/clinic-app/static/js/main.d589cb13.js",
+    "static/js/787.13ab08c3.chunk.js": "/clinic-app/static/js/787.13ab08c3.chunk.js",
+    "static/media/carousel-1.png": "/clinic-app/static/media/carousel-1.b8a1a654fb2e68d04e33.png",
+    "static/media/carousel-2.jpg": "/clinic-app/static/media/carousel-2.f654a27ebb31a739a895.jpg",
+    "static/media/logo02.svg": "/clinic-app/static/media/logo02.ef3dc4768d89bf758521d844dc1406e2.svg",
+    "static/media/logo01.svg": "/clinic-app/static/media/logo01.f0f3765fa14836d794809c38f220dbb8.svg",
+    "static/media/logo03.svg": "/clinic-app/static/media/logo03.ed39a486d651c4499e1cc1e7717dfc41.svg",
+    "static/media/revicons.eot": "/clinic-app/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/logo06.svg": "/clinic-app/static/media/logo06.7fcfefcaa956903796a1150cbef55634.svg",
+    "static/media/revicons.ttf": "/clinic-app/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/logo05.svg": "/clinic-app/static/media/logo05.e583f97db1f0a140ca92e3cf84c88b12.svg",
+    "static/media/revicons.woff": "/clinic-app/static/media/revicons.e8746a624ed098489406.woff",
+    "static/media/logo04.svg": "/clinic-app/static/media/logo04.d4601325c6147b5d07ef7a4513368711.svg",
+    "static/media/slick.svg": "/clinic-app/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/clinic-app/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/clinic-app/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/clinic-app/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/clinic-app/index.html",
+    "main.8e0f0693.css.map": "/clinic-app/static/css/main.8e0f0693.css.map",
+    "main.d589cb13.js.map": "/clinic-app/static/js/main.d589cb13.js.map",
+    "787.13ab08c3.chunk.js.map": "/clinic-app/static/js/787.13ab08c3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e0f0693.css",
+    "static/js/main.d589cb13.js"
+  ]
+}
