@@ -14,7 +14,7 @@ function App() {
         <Router>
           <TopNavbar />
           <Routes>
-            <Route path="/home" element={<Landing />}/>
+            <Route path="/" element={<Landing />}/>
             <Route path="/profil" element={<Profile />} />
             <Route path="/dokter" element={<Dokter />} />
             <Route path="/artikel" element={<ArtikelIndex />} />
