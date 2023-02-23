@@ -247,11 +247,27 @@ export default function TopNavbar() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
+                  <Link to={"/clinic-app/"}>
+                    <a
+                      href="#"
+                      className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                    Home
+                  </a>
+                  </Link>
+                  <Link to={"/clinic-app/profil"}>
+                    <a
+                      href="#"
+                      className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      Profil
+                    </a>
+                  </Link>
                   <Disclosure as="div" className="-mx-3">
                     {({ open }) => (
                       <>
                         <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50">
-                          Product
+                          Layanan
                           <ChevronDownIcon
                             className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                             aria-hidden="true"
@@ -272,23 +288,39 @@ export default function TopNavbar() {
                       </>
                     )}
                   </Disclosure>
+                  <Link to={"/clinic-app/dokter"}>
                   <a
                     href="#"
                     className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Features
+                    Dokter
+                  </a>
+                  </Link>
+                  <Link to={"/clinic-app/artikel"}>
+                  <a
+                    href="#"
+                    className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Artikel Kesehatan
+                  </a>
+                  </Link>
+                  <a
+                    href="#"
+                    className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Penyakit yang Ditangani
                   </a>
                   <a
                     href="#"
                     className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Marketplace
+                    Berita & Aktivitas
                   </a>
                   <a
                     href="#"
                     className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Company
+                    Cabang
                   </a>
                 </div>
                 {/* <div className="py-6">
