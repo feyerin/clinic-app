@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Fragment, useState, useEffect } from 'react'
+import { Outlet } from 'react-router-dom';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   ArrowPathIcon,
@@ -335,6 +336,9 @@ export default function TopNavbar() {
             </div>
           </Dialog.Panel>
         </Dialog>
+
+        <Outlet/>
+        
       </Wrapper>
     </>
   );
