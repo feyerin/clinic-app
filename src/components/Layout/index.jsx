@@ -6,7 +6,7 @@ export default function Layout({Content}) {
           <ol className="inline-flex items-center mb-3 space-x-1 md:space-x-3 sm:mb-0">
             <li>
               <div className="flex items-center">
-                <a href="/home" className="ml-1 text-sm font-medium text-gray-700 hover:text-primary md:ml-2 dark:text-gray-400 dark:hover:text-primary">Home</a>
+                <a href="/" className="ml-1 text-sm font-medium text-gray-700 hover:text-primary md:ml-2 dark:text-gray-400 dark:hover:text-primary">Home</a>
               </div>
             </li>
             <li aria-current="page">

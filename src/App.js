@@ -1,12 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router, Routes, Route, createBrowserRouter, RouterProvider } from "react-router-dom";
-import TopNavbar from './components/Nav/TopNavbar';
-import Footer from './components/Sections/Footer';
-import Landing from "./screens/Landing.jsx";
-import Profile from './screens/Profile/Profile';
-import Dokter from './screens/Dokter/Dokter';
-import ArtikelIndex from './screens/Artikel/ArtikelIndex';
-import Index from './components/Layout/admin';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import routesConfig from './navigation/route';
 
 

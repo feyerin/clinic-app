@@ -12,6 +12,7 @@ import DokterTable from "../screens/Admin/Dokter/DokterTable";
 import CabangTable from "../screens/Admin/Cabang/CabangTable";
 import DokterCreate from "../screens/Admin/Dokter/DokterCreate";
 import ArtikelCreate from "../screens/Admin/Artikel/ArtikelCreate";
+import ArtikelDetail from "../screens/Artikel/ArtikelDetail";
 
 const routesConfig = [
   {
@@ -22,7 +23,7 @@ const routesConfig = [
     path: "/clinic-app/",
     children: [
       {
-        path: "home",
+        path: "/clinic-app/",
         element: 
           <>
             <TopNavbar/>
@@ -63,6 +64,24 @@ const routesConfig = [
           <>
             <TopNavbar/>
             <ArtikelIndex />
+            <Footer/>
+          </>
+      },
+      {
+        path: "artikel/content/preview",
+        element: 
+          <>
+            <TopNavbar/>
+            <ArtikelDetail />
+            <Footer/>
+          </>
+      },
+      {
+        path: "artikel/content/",
+        element: 
+          <>
+            <TopNavbar/>
+            <ArtikelDetail />
             <Footer/>
           </>
       },

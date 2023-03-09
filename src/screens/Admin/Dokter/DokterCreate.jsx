@@ -84,7 +84,7 @@ export default function DokterCreate() {
                             <input
                                 id="originalFileName"
                                 type="file"
-                                inputProps={{ accept: 'image/*, .xlsx, .xls, .csv, .pdf, .pptx, .pptm, .ppt' }}
+                                inputProps={{ accept: 'image/*' }}
                                 required
                                 label="Document"
                                 name="originalFileName"
