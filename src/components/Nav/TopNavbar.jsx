@@ -128,7 +128,7 @@ export default function TopNavbar() {
             </Popover>
             
             <Link to={"/clinic-app/dokter"}>
-              <a href="/dokter" className="text-sm font-semibold leading-6 text-gray-900">
+              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
                 Dokter
               </a>
             </Link>

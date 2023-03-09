@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const products = [
   { name: 'Analytics' },
   { name: 'Engagement' },
@@ -25,14 +27,16 @@ labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                                 <img className="rounded-t-lg"  src="https://dummyimage.com/400x400/b9bad4/fff" alt="" />
                             </div>
                             <time dateTime="2020-03-16" className="text-gray-500">Mar 16, 2020</time>
-                            <a href="/clinic-app/artikel-content" className="relative z-10 rounded-full bg-gray-50 py-1.5 px-3 font-medium text-gray-600 hover:bg-gray-100">Marketing</a>
+                            <a href="#" className="relative z-10 rounded-full bg-gray-50 py-1.5 px-3 font-medium text-gray-600 hover:bg-gray-100">Marketing</a>
                             </div>
                             <div className="group relative">
                             <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                                <a href="/clinic-app/artikel-content">
-                                <span className="absolute inset-0"></span>
-                                Boost your conversion rate
-                                </a>
+                                <Link to={"/clinic-app/artikel-content"}>
+                                    <a href="">
+                                        <span className="absolute inset-0"></span>
+                                        Boost your conversion rate
+                                    </a>
+                                </Link>
                             </h3>
                             <p className="mt-5 text-sm leading-6 text-gray-600 line-clamp-3">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
                             </div>
