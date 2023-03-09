@@ -19,17 +19,14 @@ export default function DokterContent({}) {
         },
     ]);
 
-    useEffect(() => {
-      const onDefineViewMode = () => {
-        if (window.location.pathname === "/clinic-app/dokter/preview") {
+    const onDefineViewMode = () => {
+        if (window.location.pathname === "/clinic-app/dokter-preview") {
              setItems([...items, JSON.parse(localStorage.getItem('dokterPreviewData'))]);
         }
       }
-    
-      return () => {
-        onDefineViewMode();
-      }
 
+    useEffect(() => {
+        onDefineViewMode();
     }, [])
     
 

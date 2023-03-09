@@ -142,7 +142,7 @@ export default function DokterCreate() {
                 </div>
                 <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
                     <Link 
-                        to={`/clinic-app/dokter/preview`}
+                        to={`/clinic-app/dokter-preview`}
                         target="_blank"
                     >
                         <button

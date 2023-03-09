@@ -50,7 +50,7 @@ const routesConfig = [
           </>
       },
       {
-        path: "dokter/preview",
+        path: "dokter-preview",
         element: 
           <>
             <TopNavbar/>
@@ -68,7 +68,7 @@ const routesConfig = [
           </>
       },
       {
-        path: "artikel/content/preview",
+        path: "artikel-content-preview",
         element: 
           <>
             <TopNavbar/>
@@ -77,7 +77,7 @@ const routesConfig = [
           </>
       },
       {
-        path: "artikel/content/",
+        path: "artikel-content/",
         element: 
           <>
             <TopNavbar/>

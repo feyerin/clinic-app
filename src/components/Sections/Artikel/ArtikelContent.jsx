@@ -7,7 +7,7 @@ export default function ArtikelContent() {
     console.log(parse);
 
     const onDefineViewMode = () => {
-        if (window.location.pathname === "/clinic-app/artikel/content/preview") {
+        if (window.location.pathname === "/clinic-app/artikel-content-preview") {
              setItems(JSON.parse(localStorage.getItem('artikelPreviewData')));
         }
       }
