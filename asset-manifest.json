@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/clinic-app/static/css/main.e43f8082.css",
-    "main.js": "/clinic-app/static/js/main.d3b51e4d.js",
+    "main.js": "/clinic-app/static/js/main.ce7a8def.js",
     "static/js/787.13ab08c3.chunk.js": "/clinic-app/static/js/787.13ab08c3.chunk.js",
     "static/media/carousel-1.png": "/clinic-app/static/media/carousel-1.b8a1a654fb2e68d04e33.png",
     "static/media/carousel-2.jpg": "/clinic-app/static/media/carousel-2.f654a27ebb31a739a895.jpg",
@@ -20,11 +20,11 @@
     "static/media/slick.woff": "/clinic-app/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/clinic-app/index.html",
     "main.e43f8082.css.map": "/clinic-app/static/css/main.e43f8082.css.map",
-    "main.d3b51e4d.js.map": "/clinic-app/static/js/main.d3b51e4d.js.map",
+    "main.ce7a8def.js.map": "/clinic-app/static/js/main.ce7a8def.js.map",
     "787.13ab08c3.chunk.js.map": "/clinic-app/static/js/787.13ab08c3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e43f8082.css",
-    "static/js/main.d3b51e4d.js"
+    "static/js/main.ce7a8def.js"
   ]
 }
