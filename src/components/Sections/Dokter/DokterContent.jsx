@@ -1,4 +1,38 @@
-export default function DokterContent() {
+import { useEffect, useState } from "react";
+
+export default function DokterContent({}) {
+    const [items, setItems] = useState([
+        {
+            name: "bonnie brown",
+            SIP: "34/B.15b/31.72.06/-1.77",
+            image: "https://dummyimage.com/400x400/b9bad4/fff"
+        },
+        {
+            name: "bonnie green",
+            SIP: "34/B.15b/31.72.06/-1.78",
+            image: "https://dummyimage.com/400x400/b9bad4/fff"
+        },
+        {
+            name: "bonnie red",
+            SIP: "34/B.15b/31.72.06/-1.79",
+            image: "https://dummyimage.com/400x400/b9bad4/fff"
+        },
+    ]);
+
+    useEffect(() => {
+      const onDefineViewMode = () => {
+        if (window.location.pathname === "/clinic-app/dokter/preview") {
+             setItems([...items, JSON.parse(localStorage.getItem('dokterPreviewData'))]);
+        }
+      }
+    
+      return () => {
+        onDefineViewMode();
+      }
+
+    }, [])
+    
+
   return (
     <>
       <div className="bg-white">
@@ -19,46 +53,21 @@ export default function DokterContent() {
                 </section>
 
                 <div className="mx-auto mt-20 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-                    <div className="group relative">   
-                        <div className="mx-auto max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img className="rounded-t-lg" src="https://dummyimage.com/400x400/b9bad4/fff" alt="" />
-                            </a>
-                            <div className="p-5">
+                    {items.map((value, index) => (
+                        <div key={index} className="group relative">   
+                            <div className="mx-auto max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                                 <a href="#">
-                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Bonnie Green</h5>
+                                    <img className="rounded-t-lg" src={value.image ? value.image : "https://dummyimage.com/400x400/b9bad4/fff"} alt="" />
                                 </a>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">SIP : 34/B.15b/31.72.06/-1.779</p>
+                                <div className="p-5">
+                                    <a href="#">
+                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{ value.name ? value.name : "Bonnie Green" }</h5>
+                                    </a>
+                                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">SIP : { value.SIP ? value.SIP : "34/B.15b/31.72.06/-1.779" }</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="group relative">   
-                        <div className="mx-auto max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img className="rounded-t-lg" src="https://dummyimage.com/400x400/b9bad4/fff" alt="" />
-                            </a>
-                            <div className="p-5">
-                                <a href="#">
-                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Bonnie Green</h5>
-                                </a>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">SIP : 34/B.15b/31.72.06/-1.779</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="group relative">   
-                        <div className="mx-auto max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img className="rounded-t-lg" src="https://dummyimage.com/400x400/b9bad4/fff" alt="" />
-                            </a>
-                            <div className="p-5">
-                                <a href="#">
-                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Bonnie Green</h5>
-                                </a>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">SIP : 34/B.15b/31.72.06/-1.779</p>
-                            </div>
-                        </div>
-                    </div>
-                         
+                    ))}           
                 </div>
             </div>
         </div>   

@@ -65,7 +65,7 @@ export default function TopNavbar() {
           </div>
           
           <Popover.Group className="hidden lg:flex lg:gap-x-12 lg:pr-30">
-            <Link to={"/clinic-app/"}>
+            <Link to={"/clinic-app/home"}>
               <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
                 Home
               </a>

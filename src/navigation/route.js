@@ -10,6 +10,8 @@ import UserTable from "../screens/Admin/User/UserTable";
 import LayananTable from "../screens/Admin/Layanan/LayananTable";
 import DokterTable from "../screens/Admin/Dokter/DokterTable";
 import CabangTable from "../screens/Admin/Cabang/CabangTable";
+import DokterCreate from "../screens/Admin/Dokter/DokterCreate";
+import ArtikelCreate from "../screens/Admin/Artikel/ArtikelCreate";
 
 const routesConfig = [
   {
@@ -47,6 +49,15 @@ const routesConfig = [
           </>
       },
       {
+        path: "dokter/preview",
+        element: 
+          <>
+            <TopNavbar/>
+            <Dokter />
+            <Footer/>
+          </>
+      },
+      {
         path: "artikel",
         element: 
           <>
@@ -76,6 +87,13 @@ const routesConfig = [
           </>
       },
       {
+        path: "dokter/create",
+        element: 
+          <>
+            <DokterCreate/>
+          </>
+      },
+      {
         path: "cabang",
         element: 
           <>
@@ -87,6 +105,13 @@ const routesConfig = [
         element: 
           <>
             <ArtikelTable/>
+          </>
+      },
+      {
+        path: "artikel/create",
+        element: 
+          <>
+            <ArtikelCreate/>
           </>
       },
       {
