@@ -33,7 +33,6 @@ export default function Layout({Content}) {
             </defs>
           </svg>
         </div>
-        
       </div>
     </>
 
