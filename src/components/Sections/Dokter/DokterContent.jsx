@@ -61,7 +61,11 @@ export default function DokterContent({}) {
                                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{ value.name ? value.name : "Bonnie Green" }</h5>
                                     </a>
                                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">SIP : { value.SIP ? value.SIP : "34/B.15b/31.72.06/-1.779" }</p>
+                                    <div className="">
+                                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Jadwal : {"Senin - Jumat 10:00 - 16:00 WIB" }</p>
                                 </div>
+                                </div>
+                                
                             </div>
                         </div>
                     ))}           

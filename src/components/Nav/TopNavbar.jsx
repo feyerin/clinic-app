@@ -13,14 +13,23 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import { Link } from 'react-router-dom'
+import LogoIcon from "../../assets/img/logo-clinic.png";
 
 
 const products = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+  { name: 'Penyakit Yang Ditangani', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
+  { name: 'Lorem Ipsum', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
+  { name: 'Lorem Ipsum', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
+  { name: 'Lorem Ipsum', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
+  { name: 'Lorem Ipsum', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+]
+
+const services = [
+  { name: 'Dokter Umum', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
+  { name: 'Farmasi', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
+  { name: 'Labolatorium', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
+  { name: 'Medical Check-up', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
+  { name: 'Fisioterapi', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
 ]
 const callsToAction = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
@@ -50,7 +59,7 @@ export default function TopNavbar() {
           <div className="flex lg:flex-1">
             <a href="#" className="lg:pr-20">
               <span className="sr-only">Your Company</span>
-              <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+              <img className="h-12 w-auto" src={LogoIcon} alt="" />
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -93,7 +102,7 @@ export default function TopNavbar() {
               >
                 <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                   <div className="p-4">
-                    {products.map((item) => (
+                    {services.map((item) => (
                       <div
                         key={item.name}
                         className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
@@ -132,14 +141,12 @@ export default function TopNavbar() {
                 Dokter
               </a>
             </Link>
+
             <Link to={"/clinic-app/artikel"}>
               <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
                 Artikel Kesehatan
               </a>
             </Link>
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-              Penyakit yang Ditangani
-            </a>
 
             <Popover className="relative">
               <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
@@ -177,41 +184,13 @@ export default function TopNavbar() {
               </Transition>
             </Popover>
 
-            <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-                Cabang
-                <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-              </Popover.Button>
+            
+            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+              Membership
+            </a>
+           
 
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-40 max-w-xs overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-                  <div className="p-4">
-                    {products.map((item) => (
-                      <div
-                        key={item.name}
-                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
-                      >
-                        <div className="flex-auto">
-                          <a href={item.href} className="block font-semibold text-gray-900">
-                            {item.name}
-                            <span className="absolute inset-0" />
-                          </a>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-          
-                </Popover.Panel>
-              </Transition>
-            </Popover>
+            
           </Popover.Group>
           {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
@@ -305,12 +284,6 @@ export default function TopNavbar() {
                     Artikel Kesehatan
                   </a>
                   </Link>
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Penyakit yang Ditangani
-                  </a>
                   <a
                     href="#"
                     className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
