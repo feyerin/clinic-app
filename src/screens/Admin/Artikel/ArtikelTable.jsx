@@ -1,5 +1,5 @@
-import { React, useState, Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
+import { React, useState, useEffect } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
 import Pagination from '../../../components/Pagination';
 import Select from '../../../components/Select';
 import {
@@ -8,66 +8,14 @@ import {
     PencilSquareIcon,
   } from '@heroicons/react/20/solid'
 import { Link } from 'react-router-dom';
-
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
+import axios from 'axios';
+import Moment from 'react-moment';
 
 export default function ArtikelTable() {
     const [page, setPage] = useState(1);
 	const [size, setSize] = useState(10);
 	const [numberEntries, setNumberEntries] = useState(10);
-
-    const body = [
-        {
-            key: '1',
-            name: 'Mike',
-            age: 32,
-            address: '10 Downing Street',
-        },
-        {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        },
-        {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        },
-        {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        },
-        {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        },
-        {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        },
-        {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        },{
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        },
-        
-    ];
+    const [data, setData] = useState([]);
 
     const head = [
         {
@@ -76,19 +24,14 @@ export default function ArtikelTable() {
             key: 'name',
         },
         {
-            title: 'Color',
-            dataIndex: 'color',
-            key: 'color',
+            title: 'Created at',
+            dataIndex: 'created_at',
+            key: 'created_at',
         },
         {
-            title: 'Type',
-            dataIndex: 'type',
-            key: 'type',
-        },
-        {
-            title: 'Price',
-            dataIndex: 'price',
-            key: 'price',
+            title: 'Created By',
+            dataIndex: 'created_by',
+            key: 'created_by',
         },
         {
             title: 'Publish',
@@ -107,6 +50,40 @@ export default function ArtikelTable() {
 		setPage(newPage);
 		setSize(numberEntries);
 	};
+
+    const getListArtikel = async () => {
+        try {
+            const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/admin/article/all`, {
+                auth: {
+                    username: 'test',
+                    password: 'test'
+                }
+            });
+          setData(res.data.data)
+        } catch (error) {
+          console.log(error);
+        }
+    }
+
+    const onDelete = async (id) => {
+        try {
+            await axios.delete(`${process.env.REACT_APP_BASE_URL}/api/admin/article/delete/${id}`, {
+                auth: {
+                    username: 'test',
+                    password: 'test'
+                }
+            });
+        toast.success("Artikel Berhasil Dihapus!");
+        getListArtikel();
+        } catch (error) {
+          console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        getListArtikel();
+    }, [])
+      
 
   return (
     <div>
@@ -147,50 +124,53 @@ export default function ArtikelTable() {
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table className="w-full text-sm text-left text-gray-400 border-collapse border border-slate-500">
                 <thead className="text-xs uppercase bg-gray-50 text-gray-400">
-                    <tr>
+                    <tr> 
                         {head.map((value, index) => (
-                            <th key={index} scope="col" className="px-6 py-3">
+                            <th key={index} scope="col" colSpan={1} className="px-6 py-3" style={{width: '50px'}}>
                                 {value.title}
                             </th>
                         ))}
                     </tr>
                 </thead>
                 <tbody className='border-b border-gray-800'>
-                    {body.map((value, index) => (
-                        <tr key={index} className="bg-white border-b border-gray-800">
-                            <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap border-b border-gray-800">
-                                Apple MacBook Pro 17"
-                            </th>
-                            <td className="px-6 py-4 border-b border-gray-800">
-                                Silver
-                            </td>
-                            <td className="px-6 py-4 border-b border-gray-800">
-                                Laptop
-                            </td>
-                            <td className="px-6 py-4">
-                                $2999
-                            </td>
-                            <td className="px-6 py-4">
-                            <label className="relative inline-flex items-center cursor-pointer">
-                                <input type="checkbox" value="" className="sr-only peer"/>
-                                <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
-                            </label>
-                            </td>
-                            <td className="flex items-center px-6 py-4 space-x-3">
-                                <a href="#" className="font-medium text-white bg-blue-600 rounded-full text-center p-1">
-                                    <PencilSquareIcon className="h-5 w-5 hover:text-white" aria-hidden="false" />
-                                </a>
-                                <a href="#" className="font-medium text-white bg-red-600 rounded-full text-center p-1">
-                                    <TrashIcon className="h-5 w-5 hover:text-white" aria-hidden="false" />
-                                </a>
-                            </td>
-                        </tr>
-                    ))}
+                    { data !== [] && 
+                        data.map((value, index) => (
+                            <tr key={index} className="bg-white border-b border-gray-800">
+                                <td className="px-6 py-4 truncate" style={{width: '50px'}}>
+                                    {value.article_title}
+                                </td>
+                                <td className="px-6 py-4 border-b border-gray-800">
+                                    <Moment format="DD MMMM YYYY hh:mm:ss">{value.created_at}</Moment>
+                                    
+                                </td>
+                                <td className="px-6 py-4 border-b border-gray-800">
+                                    {}
+                                </td>
+                                <td className="px-6 py-4">
+                                <label className="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" value="" className="sr-only peer"/>
+                                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                                </label>
+                                </td>
+                                <td className="flex items-center px-6 py-4 space-x-3">
+                                    <Link to={`/clinic-app/admin/artikel/edit?id=${value.id}`} >   
+                                        <div className="font-medium text-white bg-blue-600 rounded-full text-center p-1">
+                                            <PencilSquareIcon className="h-5 w-5 hover:text-white" aria-hidden="false" />
+                                        </div>
+                                    </Link>
+                                    <button type='button' onClick={() => onDelete(value.id)} className="font-medium text-white bg-red-600 rounded-full text-center p-1">
+                                        <TrashIcon className="h-5 w-5 hover:text-white" aria-hidden="false" />
+                                    </button>
+                                </td>
+                            </tr>
+                        ))
+                    }
                 </tbody>
             </table>
         </div>
-    
-    <Pagination pageCount={10} changeHandlerPagination={handlerPagination}/>
+
+        <ToastContainer autoClose={3000} />
+        <Pagination pageCount={10} changeHandlerPagination={handlerPagination}/>
         
     </div>
   )

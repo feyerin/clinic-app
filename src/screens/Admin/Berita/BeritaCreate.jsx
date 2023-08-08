@@ -4,7 +4,7 @@ import ArrowLeft from '../../../assets/svg/ArrowLeft';
 import Avatar from '../../../assets/svg/Avatar';
 import convertBase64 from '../../../services/uploadImage';
 
-export default function DokterCreate() {
+export default function NewsCreate() {
     const [image, setImage] = useState();
     const [obj, setObj] = useState({
         image: "",

@@ -25,11 +25,10 @@ const products = [
 ]
 
 const services = [
-  { name: 'Dokter Umum', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Farmasi', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Labolatorium', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Medical Check-up', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Fisioterapi', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+  { name: 'Poli Umum', description: 'Pelayanan Medis Dasar Menyeluruh, Pengobatan dasar umum/farmasi, Penyuluhan/konseling/edukasi, Ramah Lansia', href: '#', icon: ChartPieIcon },
+  { name: 'Fisioterapi + Hidroterapi', description: '', href: '#', icon: CursorArrowRaysIcon },
+  { name: 'Labolatorium', description: '', href: '#', icon: FingerPrintIcon },
+  { name: 'Instalasi Farmasi ', description: 'Pelayanan informasi obat, Konseling Obat, Home Pharmacy Care', href: '#', icon: SquaresPlusIcon },
 ]
 const callsToAction = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
@@ -115,32 +114,14 @@ export default function TopNavbar() {
                             {item.name}
                             <span className="absolute inset-0" />
                           </a>
-                          <p className="mt-1 text-gray-600">{item.description}</p>
+                          <p className="mt-1 text-gray-600 text-xs">{item.description}</p>
                         </div>
                       </div>
-                    ))}
-                  </div>
-                  <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                    {callsToAction.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                      >
-                        <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-                        {item.name}
-                      </a>
                     ))}
                   </div>
                 </Popover.Panel>
               </Transition>
             </Popover>
-            
-            <Link to={"/clinic-app/dokter"}>
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                Dokter
-              </a>
-            </Link>
 
             <Link to={"/clinic-app/artikel"}>
               <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
@@ -268,14 +249,6 @@ export default function TopNavbar() {
                       </>
                     )}
                   </Disclosure>
-                  <Link to={"/clinic-app/dokter"}>
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Dokter
-                  </a>
-                  </Link>
                   <Link to={"/clinic-app/artikel"}>
                   <a
                     href="#"
@@ -289,12 +262,6 @@ export default function TopNavbar() {
                     className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Berita & Aktivitas
-                  </a>
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Cabang
                   </a>
                 </div>
                 {/* <div className="py-6">

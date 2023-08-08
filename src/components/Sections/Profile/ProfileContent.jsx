@@ -1,3 +1,5 @@
+import Pin from "../../../assets/svg/Pin"
+
 const features = [
   { name: 'Origin', description: 'Designed by Good Goods, Inc.' },
   { name: 'Material', description: 'Solid walnut base with rare earth magnets and powder coated steel card cover' },
@@ -11,13 +13,24 @@ export default function ProfileContent() {
   return (
     <>
       <div className="bg-white">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl  lg:px-8">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Selamat Datang di Physio</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Selamat Datang di Klinik Inggit Garnasih</h2>
             <p className="mt-4 text-gray-500">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit sagittis ex eu molestie. Nam leo odio, euismod eu pretium eu, feugiat ac quam. Donec laoreet lectus at orci efficitur imperdiet. Integer velit sem, euismod eu tellus posuere, suscipit consequat nulla. Duis ante lectus, blandit eget velit nec, fringilla suscipit lorem. Praesent in neque ligula. Ut at eros vel enim ullamcorper tincidunt. Praesent quis pulvinar sapien, at vestibulum ex. Nunc id lacinia nunc. Nunc vehicula porta turpis, non tristique mauris eleifend ac.
+              Klinik Pratama Inggit Garnasih adalah Klinik pratama yang resmi didirikan di jalan flores nomor 6, kota bandung. Klinik tersebut didirikan sebagai komitmen pemerintah provinsi jawa barat dalam merealisasikan wasiat dari ibu inggit garnasih khususnya dalam pelayanan terhadap lansia. 
             </p>
-
+            <p className="mt-4 text-gray-500">
+              Klinik pratama inggit garnasih juga merupakan inisiasi dari Badan Amil Zakat Nasional Provinsi Jawa Barat (disingkat BAZNAS JABAR) yang diamanahi oleh Gubernur Jawa Barat sekaligus amanat dari Ibu Inggit Garnasih untuk memuliakan para lansia (Program Nyaah Ka Kolot).
+            </p>
+            <p className="mt-4 text-gray-500">
+              Klinik Pratama Inggit Garnasih merupakan fasilitas pelayanan kesehatan yang bersifat mandiri dalam menyelenggarakan pelayanan kesehatan perorangan bagi lansia seiring dengan meningkatnya jumlah lansia dari tahun ke tahun dan merupakan bentuk keperdulian dalam meningkatkan derajat kesehatan khususnya lansia. 
+            </p>
+            <p className="mt-4 text-gray-500">
+              Adapun fasilitas yang dimiliki adalah Layanan Poli Umum, Layanan Fisioterapi+Hidroterapi, Instalasi Farmasi, Laboratorium serta layanan-layanan lain yang akan terus dikembangkan. Fisioterapi merupakan layanan unggulan dari Klinik. 
+            </p>
+            <p className="mt-4 text-gray-500">
+              Kami mengedepankan pelayanan ramah, prima, suasana hommy, fasilitas yang lengkap dan modern.
+            </p>
             <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
               {features.map((feature) => (
                 <div key={feature.name} className="border-t border-gray-200 pt-4">
@@ -52,20 +65,33 @@ export default function ProfileContent() {
         </div>
         
         {/* alamat */}
-        <div className="bg-white py-24 sm:py-32">
+        <div className="bg-white py-12 sm:py-16">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto max-w-2xl sm:text-center">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Lokasi Klinik</h2>
-                    <p className="mt-6 text-lg leading-8 text-gray-600">Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.</p>
-                </div>
                 <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
                 <div className="p-8 sm:p-10 lg:flex-auto">
-                    <h3 className="text-2xl font-bold tracking-tight text-gray-900">Cabang Tebet</h3>
-                    <p className="mt-6 text-base leading-7 text-gray-600">Lorem ipsum dolor sit amet consect etur adipisicing elit. Itaque amet indis perferendis blanditiis repellendus etur quidem assumenda.</p>
-                    <div className="mt-10 flex items-center gap-x-4">
-                    <h4 className="flex-none text-sm font-semibold leading-6 text-indigo-600">What’s included</h4>
-                    <div className="h-px flex-auto bg-gray-100"></div>
+                    <h3 className="text-2xl font-bold tracking-tight text-gray-900">Lokasi Klinik</h3>
+                    <div className="mt-6">
+                      <span><a href="https://goo.gl/maps/y8h9x3VLGRfgf75n9" className="text-base leading-7 text-gray-600"> Jl. Flores No.6, Citarum, Kec. Bandung Wetan, Kota Bandung, Jawa Barat 40115 </a></span>
+                      <span className=" float-right"><Pin/></span> 
                     </div>
+
+                    <div>
+                      <div className="mt-6 text-base leading-7 text-gray-600"> Nomor Pendaftaran/Registrasi :</div>
+                      <a href="https://wa.me/628112440606" className="text-base leading-7 text-gray-600">+62811-2440-606</a>
+                    </div>
+
+                    <div>
+                      <div className="mt-6 text-base leading-7 text-gray-600"> Nomor Marketing/Kerjasama :</div>
+                      <a href="https://wa.me/6282218770606" className="text-base leading-7 text-gray-600">+62822-1877-0606</a>
+                    </div>
+                    
+                    <div className="mt-10 flex items-center gap-x-4">
+                      <h4 className="flex-none text-sm font-semibold leading-6 text-indigo-600">What’s included</h4>
+                      <div className="h-px flex-auto bg-gray-100"></div>
+                    </div>
+
+                 
+                    
                     <ul role="list" className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
                     <li className="flex gap-x-3">
                         <svg className="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -106,47 +132,6 @@ export default function ProfileContent() {
                 </div>
             </div>
         </div>
-
-        <div className="flexCenter bg-white">
-            <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                <div className="mx-auto max-w-2xl text-center">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Tim Dokter</h2>
-                    <p className="mt-2 text-lg leading-8 text-gray-600">Kami memiliki tim dari terapis-terapis Indonesia yang telah meraih pendidikan mereka dari berbagai negara, seperti Australia, Belanda, dan Amerika Serikat. Mereka memiliki kesamaan dalam faktor-faktor berikut:</p>
-                </div>
-
-                <div className="mt-20 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-                    <div className="group relative">
-                        <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none lg:h-80">
-                            <img src="https://dummyimage.com/400x400/000/fff" alt="" className="h-full w-full object-cover object-center lg:h-full lg:w-full rounded-full"/>
-                        </div>
-                        <div className="mt-4 flex flex-col items-center pb-10">
-                            <h5 className="mb-1 text-xl font-medium text-gray-900 ">Bonnie Green</h5>
-                            <span className="text-sm text-gray-500 ">SIP : 34/B.15b/31.72.06/-1.779</span>
-                        </div>
-                    </div>
-                    <div className="group relative">
-                        <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none lg:h-80">
-                            <img src="https://dummyimage.com/400x400/000/fff" alt="" className="h-full w-full object-cover object-center lg:h-full lg:w-full rounded-full"/>
-                        </div>
-                        <div className="mt-4 flex flex-col items-center pb-10">
-                            <h5 className="mb-1 text-xl font-medium text-gray-900 ">Bonnie Green</h5>
-                            <span className="text-sm text-gray-500 ">SIP : 34/B.15b/31.72.06/-1.779</span>
-                        </div>
-                    </div>
-                    <div className="group relative">
-                        <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none lg:h-80">
-                            <img src="https://dummyimage.com/400x400/000/fff" alt="" className="h-full w-full object-cover object-center lg:h-full lg:w-full rounded-full"/>
-                        </div>
-                        <div className="mt-4 flex flex-col items-center pb-10">
-                            <h5 className="mb-1 text-xl font-medium text-gray-900 ">Bonnie Green</h5>
-                            <span className="text-sm text-gray-500 ">SIP : 34/B.15b/31.72.06/-1.779</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-     
       </div>
     </>
 

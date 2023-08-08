@@ -1,6 +1,6 @@
-import { React, useState, Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
+import { React, useState, useEffect } from 'react'
 import Pagination from '../../../components/Pagination';
+import { ToastContainer, toast } from 'react-toastify';
 import Select from '../../../components/Select';
 import {
     PencilIcon,
@@ -8,26 +8,14 @@ import {
     PencilSquareIcon,
   } from '@heroicons/react/20/solid'
 import { Link } from 'react-router-dom';
-import Avatar from '../../../assets/svg/Avatar';
+import axios from 'axios';
+import Moment from 'react-moment';
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
-
-export default function DokterTable() {
+export default function NewsTable() {
     const [page, setPage] = useState(1);
 	const [size, setSize] = useState(10);
 	const [numberEntries, setNumberEntries] = useState(10);
-
-    const body = [
-        {
-            key: '1',
-            name: 'Mike',
-            age: 32,
-            address: '10 Downing Street',
-            image: ''
-        },
-    ];
+    const [data, setData] = useState([]);
 
     const head = [
         {
@@ -36,14 +24,14 @@ export default function DokterTable() {
             key: 'name',
         },
         {
-            title: 'SIP',
-            dataIndex: 'sip',
-            key: 'sip',
+            title: 'Created at',
+            dataIndex: 'created_at',
+            key: 'created_at',
         },
         {
-            title: 'Type',
-            dataIndex: 'type',
-            key: 'type',
+            title: 'Created By',
+            dataIndex: 'created_by',
+            key: 'created_by',
         },
         {
             title: 'Publish',
@@ -63,19 +51,51 @@ export default function DokterTable() {
 		setSize(numberEntries);
 	};
 
-  return (
+    const getListArtikel = async () => {
+        try {
+            const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/admin/article/all`, {
+                auth: {
+                    username: 'test',
+                    password: 'test'
+                }
+            });
+          setData(res.data.data)
+        } catch (error) {
+          console.log(error);
+        }
+    }
 
+    const onDelete = async (id) => {
+        try {
+            const res = await axios.delete(`${process.env.REACT_APP_BASE_URL}/api/admin/news/delete/${id}`, {
+                auth: {
+                    username: 'test',
+                    password: 'test'
+                }
+            });
+        toast.success("Artikel Berhasil Dihapus!");
+        getListArtikel();
+        } catch (error) {
+          console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        getListArtikel();
+    }, [])    
+
+  return (
     <div>
         <div className="flex">
             <div className="min-w-0 flex-1">
                 <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
-                    Dokter management
+                    Berita & Aktivitas
                 </h2>
                 <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6">
                 </div>
             </div>
             <div className="lg:mt-0 lg:ml-4">
-                <Link to={"/clinic-app/admin/dokter/create"}>
+                <Link to={"/clinic-app/admin/artikel/create"}>
                     <span className="sm:ml-3">
                         <button
                             type="button"
@@ -112,40 +132,42 @@ export default function DokterTable() {
                     </tr>
                 </thead>
                 <tbody className='border-b border-gray-800'>
-                    {body.map((value, index) => (
-                        <tr key={index} className="bg-white border-b border-gray-800">
-                            <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap align-middle">
-                                Apple MacBook Pro 17"
-                            </th>
-                            <td className="px-6 py-4 align-middle">
-                                Silver
-                            </td>
-                            <td className="px-6 py-4 align-middle">
-                            <span className="">
-                                {value.image ? <img src={`${value.image}`} height={300} width={300}/>: <span className="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100"><Avatar/></span>}
-                            </span>
-                            </td>
-                            <td className="px-6 py-4 align-middle">
+                    { data !== [] && 
+                        data.map((value, index) => (
+                            <tr key={index} className="bg-white border-b border-gray-800">
+                                <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap border-b border-gray-800">
+                                    {value.article_title}
+                                </th>
+                                <td className="px-6 py-4 border-b border-gray-800">
+                                    <Moment format="DD MMMM YYYY hh:mm:ss">{value.created_at}</Moment>
+                                    
+                                </td>
+                                <td className="px-6 py-4 border-b border-gray-800">
+                                    {}
+                                </td>
+                                <td className="px-6 py-4">
                                 <label className="relative inline-flex items-center cursor-pointer">
                                     <input type="checkbox" value="" className="sr-only peer"/>
                                     <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
                                 </label>
-                            </td>
-                            <td className="flex items-center px-6 py-4 space-x-3 item mt-2">
-                                <a href="#" className="font-medium text-white bg-blue-600 rounded-full text-center p-1">
-                                    <PencilSquareIcon className="h-5 w-5 hover:text-white" aria-hidden="false" />
-                                </a>
-                                <a href="#" className="font-medium text-white bg-red-600 rounded-full text-center p-1">
-                                    <TrashIcon className="h-5 w-5 hover:text-white" aria-hidden="false" />
-                                </a>
-                            </td>
-                        </tr>
-                    ))}
+                                </td>
+                                <td className="flex items-center px-6 py-4 space-x-3">
+                                    <a href="#" className="font-medium text-white bg-blue-600 rounded-full text-center p-1">
+                                        <PencilSquareIcon className="h-5 w-5 hover:text-white" aria-hidden="false" />
+                                    </a>
+                                    <button type='button' onClick={() => onDelete(value.id)} className="font-medium text-white bg-red-600 rounded-full text-center p-1">
+                                        <TrashIcon className="h-5 w-5 hover:text-white" aria-hidden="false" />
+                                    </button>
+                                </td>
+                            </tr>
+                        ))
+                    }
                 </tbody>
             </table>
         </div>
-    
-    <Pagination pageCount={10} changeHandlerPagination={handlerPagination}/>
+
+        <ToastContainer autoClose={3000} />
+        <Pagination pageCount={10} changeHandlerPagination={handlerPagination}/>
         
     </div>
   )

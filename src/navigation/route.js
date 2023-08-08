@@ -8,16 +8,25 @@ import AdminLayout from "../components/Layout/admin";
 import ArtikelTable from "../screens/Admin/Artikel/ArtikelTable";
 import UserTable from "../screens/Admin/User/UserTable";
 import LayananTable from "../screens/Admin/Layanan/LayananTable";
-import DokterTable from "../screens/Admin/Dokter/DokterTable";
-import CabangTable from "../screens/Admin/Cabang/CabangTable";
-import DokterCreate from "../screens/Admin/Dokter/DokterCreate";
 import ArtikelCreate from "../screens/Admin/Artikel/ArtikelCreate";
 import ArtikelDetail from "../screens/Artikel/ArtikelDetail";
+import Login from "../screens/Admin/Auth//Login";
+import { Navigate } from "react-router-dom";
+import NewsCreate from "../screens/Admin/Berita/BeritaCreate";
+import NewsTable from "../screens/Admin/Berita/BeritaTable";
+import ArtikelEdit from "../screens/Admin/Artikel/ArtikelEdit";
 
 const routesConfig = [
   {
     path: "/login",
     element: <Landing />,
+  },
+  {
+    path: "/admin/login",
+    element: 
+      <>
+        <Login/>
+      </>
   },
   {
     path: "/clinic-app/",
@@ -102,21 +111,14 @@ const routesConfig = [
         path: "dokter",
         element: 
           <>
-            <DokterTable/>
+            <NewsTable/>
           </>
       },
       {
         path: "dokter/create",
         element: 
           <>
-            <DokterCreate/>
-          </>
-      },
-      {
-        path: "cabang",
-        element: 
-          <>
-            <CabangTable/>
+            <NewsCreate/>
           </>
       },
       {
@@ -134,6 +136,13 @@ const routesConfig = [
           </>
       },
       {
+        path: "artikel/edit",
+        element: 
+          <>
+            <ArtikelEdit/>
+          </>
+      },
+      {
         path: "user",
         element: 
           <>
@@ -142,6 +151,10 @@ const routesConfig = [
       }
     ],
   },
+  {
+    path:"*",
+    element:<Navigate to="/clinic-app" replace />
+  }
 ];
 
 export default routesConfig

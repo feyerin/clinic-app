@@ -15,12 +15,11 @@ export default function Landing() {
       <Projects />
       <Blog />
       <Contact />
-
-      <button 
-        title="Contact"
-        className="fixed z-90 bottom-10 right-8 w-16 h-16 rounded-full drop-shadow-lg flex justify-center items-center text-4xl hover:drop-shadow-2xl hover:animate-bounce duration-300">
-          <img src={whatsapp} />
-      </button>
+      <a href="https://wa.me/628112440606">
+        <button className="fixed z-90 bottom-10 right-8 w-16 h-16 rounded-full drop-shadow-lg flex justify-center items-center text-4xl hover:drop-shadow-2xl hover:animate-bounce duration-300">
+            <img src={whatsapp} />
+        </button>
+      </a>
     </>
   );
 }
