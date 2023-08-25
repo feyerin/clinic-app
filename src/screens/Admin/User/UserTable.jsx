@@ -1,5 +1,5 @@
-import { React, useState, Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
+import { React, useState, Fragment, useEffect } from 'react';
+import { Menu, Transition } from '@headlessui/react';
 import Pagination from '../../../components/Pagination';
 import Select from '../../../components/Select';
 import {
@@ -107,8 +107,14 @@ export default function UserTable() {
 		setSize(numberEntries);
 	};
 
-  return (
+    console.log(page, size)
 
+    useEffect(() => {
+      setNumberEntries(10);
+    }, [])
+    
+
+  return (
     <div>
         <div className="flex">
             <div className="min-w-0 flex-1">
@@ -190,11 +196,11 @@ export default function UserTable() {
                     </tr>
                 </thead>
                 <tbody className='border-b border-gray-800'>
-                    {body.map((value, index) => (
-                        <tr key={index} className="bg-white border-b border-gray-800">
-                            <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap border-b border-gray-800">
-                                Apple MacBook Pro 17"
-                            </th>
+                    {body.map((value) => (
+                        <tr key={value.key} className="bg-white border-b border-gray-800">
+                            <td scope="row" className="px-6 py-4 font-medium whitespace-nowrap border-b border-gray-800">
+                                Apple MacBook Pro 17
+                            </td>
                             <td className="px-6 py-4 border-b border-gray-800">
                                 Silver
                             </td>
@@ -224,8 +230,7 @@ export default function UserTable() {
             </table>
         </div>
     
-    <Pagination pageCount={10} changeHandlerPagination={handlerPagination}/>
-        
+        <Pagination pageCount={10} changeHandlerPagination={handlerPagination}/>
     </div>
   )
 }

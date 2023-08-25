@@ -1,7 +1,8 @@
-import { React, useState, Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
+import React, { useEffect } from 'react';
 import Pagination from '../../../components/Pagination';
 import Select from '../../../components/Select';
+import { useState, Fragment } from 'react'
+import { Menu, Transition } from '@headlessui/react'
 import {
     PencilIcon,
     TrashIcon,
@@ -15,7 +16,7 @@ function classNames(...classes) {
 export default function LayananTable() {
     const [page, setPage] = useState(1);
 	const [size, setSize] = useState(10);
-	const [numberEntries, setNumberEntries] = useState(10);
+	const [numberEntries, setNumberEntries] = useState(0);
 
     const body = [
         {
@@ -107,6 +108,13 @@ export default function LayananTable() {
 		setSize(numberEntries);
 	};
 
+    console.log(page, size)
+
+    useEffect(() => {
+      setNumberEntries(10);
+    }, [])
+    
+
   return (
 
     <div>
@@ -193,7 +201,7 @@ export default function LayananTable() {
                     {body.map((value, index) => (
                         <tr key={index} className="bg-white border-b border-gray-800">
                             <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap border-b border-gray-800">
-                                Apple MacBook Pro 17"
+                                Apple MacBook Pro 17
                             </th>
                             <td className="px-6 py-4 border-b border-gray-800">
                                 Silver

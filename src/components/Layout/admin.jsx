@@ -13,7 +13,6 @@ export default function AdminLayout() {
         setMenu(newArr);
     }
 
-
     return (
         <div>
             <div className="sticky top-0 bg-white xl:hidden flex justify-between w-full h-14 p-6 shadow-md z-50">
@@ -64,7 +63,7 @@ export default function AdminLayout() {
                                     </span>
                                 </a>
                                 <div id="menu1" className={`${menu[0] ? 'flex' : 'hidden'} justify-start flex-col w-full md:w-auto items-start pb-1`}>
-                                    <Link to={"/clinic-app/admin/dokter"}>
+                                    <Link to={"/admin/berita"}>
                                         <button className="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2  w-full md:w-52">
                                             <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M8 19C10.2091 19 12 17.2091 12 15C12 12.7909 10.2091 11 8 11C5.79086 11 4 12.7909 4 15C4 17.2091 5.79086 19 8 19Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -75,7 +74,7 @@ export default function AdminLayout() {
                                             <p className="text-base leading-4  ">Berita & Aktivitas</p>
                                         </button>
                                     </Link>
-                                    <Link to={"/clinic-app/admin/"}>
+                                    <Link to={"/admin/"}>
                                         <button className="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2  w-full md:w-52">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
@@ -87,7 +86,7 @@ export default function AdminLayout() {
                                 </div>
                             </li>
                             <li>
-                                <Link to={"/clinic-app/admin/artikel"}>
+                                <Link to={"/admin/artikel"}>
                                     <div className="flex items-center p-2 focus:mr-3 hover:mr-3 text-base font-normal text-gray-600 rounded-lg focus:bg-gray-700 focus:text-white hover:bg-gray-100 dark:hover:bg-gray-600 hover:text-white">
                                         <svg aria-hidden="true" className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path><path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
                                         <span className="flex-1 ml-3 whitespace-nowrap">Artikel</span>
@@ -96,7 +95,7 @@ export default function AdminLayout() {
                                 </Link>
                             </li>
                             <li>
-                                <Link to={"/clinic-app/admin/user"}>
+                                <Link to={"/admin/user"}>
                                     <div className="flex items-center p-2 focus:mr-3 hover:mr-3 text-base font-normal text-gray-600 rounded-lg focus:bg-gray-700 focus:text-white hover:bg-gray-100 dark:hover:bg-gray-600 hover:text-white">
                                         <svg aria-hidden="true" className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path></svg>
                                         <span className="flex-1 ml-3 whitespace-nowrap">Users</span>

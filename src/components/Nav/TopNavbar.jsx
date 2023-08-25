@@ -1,43 +1,36 @@
+import React from "react";
 import styled from "styled-components";
-import { Fragment, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Outlet } from 'react-router-dom';
-import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import { Dialog, Popover } from '@headlessui/react'
 import {
-  ArrowPathIcon,
   Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
+  // ChartPieIcon,
+  // BuildingLibraryIcon,
+  // FingerPrintIcon,
+  // SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+// import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Link } from 'react-router-dom'
 import LogoIcon from "../../assets/img/logo-clinic.png";
 
 
-const products = [
-  { name: 'Penyakit Yang Ditangani', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Lorem Ipsum', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Lorem Ipsum', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Lorem Ipsum', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Lorem Ipsum', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
+// const products = [
+//   { name: 'Berita', description: 'Get a better understanding of your traffic', href: '/berita', icon: ChartPieIcon },
+//   { name: 'Aktivitas', description: 'Speak directly to your customers', href: '/berita', icon: BuildingLibraryIcon },
+// ]
 
-const services = [
-  { name: 'Poli Umum', description: 'Pelayanan Medis Dasar Menyeluruh, Pengobatan dasar umum/farmasi, Penyuluhan/konseling/edukasi, Ramah Lansia', href: '#', icon: ChartPieIcon },
-  { name: 'Fisioterapi + Hidroterapi', description: '', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Labolatorium', description: '', href: '#', icon: FingerPrintIcon },
-  { name: 'Instalasi Farmasi ', description: 'Pelayanan informasi obat, Konseling Obat, Home Pharmacy Care', href: '#', icon: SquaresPlusIcon },
-]
-const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
-]
+// const services = [
+//   { name: 'Poli Umum', description: 'Pelayanan Medis Dasar Menyeluruh, Pengobatan dasar umum/farmasi, Penyuluhan/konseling/edukasi, Ramah Lansia', href: '#', icon: ChartPieIcon },
+//   { name: 'Fisioterapi + Hidroterapi', description: '', href: '#', icon: BuildingLibraryIcon },
+//   { name: 'Labolatorium', description: '', href: '#', icon: FingerPrintIcon },
+//   { name: 'Instalasi Farmasi ', description: 'Pelayanan informasi obat, Konseling Obat, Home Pharmacy Care', href: '#', icon: SquaresPlusIcon },
+// ]
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+// function classNames(...classes) {
+//   return classes.filter(Boolean).join(' ')
+// }
 
 export default function TopNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -53,38 +46,28 @@ export default function TopNavbar() {
 
   return (
     <>
-      <Wrapper className="flexCenter animate" style={y > 100 ? { height: "60px", background:"#fff" } : { height: "80px" }}>
-        <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 " aria-label="Global">
-          <div className="flex lg:flex-1">
-            <a href="#" className="lg:pr-20">
-              <span className="sr-only">Your Company</span>
-              <img className="h-12 w-auto" src={LogoIcon} alt="" />
-            </a>
+      <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "60px", background:"#fff" } : { height: "80px" }}>
+        <nav className="lg:mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 " aria-label="Global">
+          <div className="">
+            <div className="flex">
+              <a href="#" className="lg:pr-20">
+                <span className="sr-only">Your Company</span>
+                <img className="h-12 w-auto" src={LogoIcon} alt="" />
+              </a>
+            </div>
           </div>
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(true)}
-            >
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="h-6 w-6 lg:hidden" aria-hidden="true" />
-            </button>
-          </div>
-          
           <Popover.Group className="hidden lg:flex lg:gap-x-12 lg:pr-30">
-            <Link to={"/clinic-app/"}>
+            {/* <Link to={"/"}>
               <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
                 Home
               </a>
-            </Link>
-            <Link to={"/clinic-app/profil"}>
+            </Link> */}
+            <Link to={"/profil"}>
               <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
                 Profil
               </a>
             </Link>
-
-            <Popover className="relative">
+            {/* <Popover className="relative">
               <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
                 Layanan
                 <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
@@ -121,14 +104,17 @@ export default function TopNavbar() {
                   </div>
                 </Popover.Panel>
               </Transition>
-            </Popover>
-
-            <Link to={"/clinic-app/artikel"}>
+            </Popover> */}
+            {/* <Link to={"/jadwal"}>
+              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+                Jadwal Dokter
+              </a>
+            </Link> */}
+            {/* <Link to={"/artikel"}>
               <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
                 Artikel Kesehatan
               </a>
             </Link>
-
             <Popover className="relative">
               <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
                 Berita & Aktivitas
@@ -163,15 +149,12 @@ export default function TopNavbar() {
           
                 </Popover.Panel>
               </Transition>
-            </Popover>
-
-            
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-              Membership
-            </a>
-           
-
-            
+            </Popover>     */}
+            <Link to={"/sejabar"}>
+              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+                Sejabar
+              </a>
+            </Link>
           </Popover.Group>
           {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
@@ -190,11 +173,11 @@ export default function TopNavbar() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img
+                {/* <img
                   className="h-8 w-auto"
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                   alt=""
-                />
+                /> */}
               </a>
               <button
                 type="button"
@@ -208,15 +191,15 @@ export default function TopNavbar() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  <Link to={"/clinic-app/"}>
+                  {/* <Link to={"/"}>
                     <a
                       href="#"
                       className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                     Home
                   </a>
-                  </Link>
-                  <Link to={"/clinic-app/profil"}>
+                  </Link> */}
+                  <Link to={"/profil"}>
                     <a
                       href="#"
                       className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
@@ -224,7 +207,7 @@ export default function TopNavbar() {
                       Profil
                     </a>
                   </Link>
-                  <Disclosure as="div" className="-mx-3">
+                  {/* <Disclosure as="div" className="-mx-3">
                     {({ open }) => (
                       <>
                         <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50">
@@ -234,52 +217,62 @@ export default function TopNavbar() {
                             aria-hidden="true"
                           />
                         </Disclosure.Button>
-                        <Disclosure.Panel className="mt-2 space-y-2">
-                          {[...products, ...callsToAction].map((item) => (
-                            <Disclosure.Button
-                              key={item.name}
-                              as="a"
-                              href={item.href}
-                              className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                            >
-                              {item.name}
-                            </Disclosure.Button>
-                          ))}
-                        </Disclosure.Panel>
                       </>
                     )}
                   </Disclosure>
-                  <Link to={"/clinic-app/artikel"}>
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Artikel Kesehatan
-                  </a>
+                  <Link to={"/jadwal"}>
+                    <a
+                      href="#"
+                      className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      Jadwal Dokter
+                    </a>
+                  </Link>
+                  <Link to={"/artikel"}>
+                    <a
+                      href="#"
+                      className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      Artikel Kesehatan
+                    </a>
                   </Link>
                   <a
                     href="#"
                     className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Berita & Aktivitas
-                  </a>
+                  </a> */}
+                  <Link to={"/sejabar"}>
+                    <a
+                      href="#"
+                      className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      Sejabar
+                    </a>
+                  </Link>
                 </div>
-                {/* <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
-                </div> */}
+                
               </div>
             </div>
           </Dialog.Panel>
         </Dialog>
 
         <Outlet/>
+
+        <div className="flex justify-end lg:hidden">
+                <button
+                  type="button"
+                  className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                  onClick={() => setMobileMenuOpen(true)}
+                >
+                  <span className="sr-only">Open main menu</span>
+                  <Bars3Icon className="h-6 w-6 lg:hidden" aria-hidden="true" />
+                </button>
+              </div>
         
       </Wrapper>
+
+      
     </>
   );
 }

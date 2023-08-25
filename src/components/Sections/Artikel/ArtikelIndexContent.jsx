@@ -42,7 +42,7 @@ labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                         </div>
                         <div className="group relative">
                             <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                                <Link to={`/clinic-app/artikel-content?id=${item.id}`}>
+                                <Link to={`/artikel-content?id=${item.id}`}>
                                     <a href="">
                                         <span className="absolute inset-0"></span>
                                         {item.article_title}

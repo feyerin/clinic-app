@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from 'react'
-import Pagination from '../../../components/Pagination';
 import { ToastContainer, toast } from 'react-toastify';
+import Pagination from '../../../components/Pagination';
 import Select from '../../../components/Select';
 import {
     PencilIcon,
@@ -11,10 +11,10 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Moment from 'react-moment';
 
-export default function NewsTable() {
+export default function BeritaTable() {
     const [page, setPage] = useState(1);
 	const [size, setSize] = useState(10);
-	const [numberEntries, setNumberEntries] = useState(10);
+	const [numberEntries, setNumberEntries] = useState(0);
     const [data, setData] = useState([]);
 
     const head = [
@@ -51,9 +51,9 @@ export default function NewsTable() {
 		setSize(numberEntries);
 	};
 
-    const getListArtikel = async () => {
+    const getListBerita = async () => {
         try {
-            const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/admin/article/all`, {
+            const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/admin/news/all`, {
                 auth: {
                     username: 'test',
                     password: 'test'
@@ -67,35 +67,39 @@ export default function NewsTable() {
 
     const onDelete = async (id) => {
         try {
-            const res = await axios.delete(`${process.env.REACT_APP_BASE_URL}/api/admin/news/delete/${id}`, {
+            await axios.delete(`${process.env.REACT_APP_BASE_URL}/api/admin/news/delete/${id}`, {
                 auth: {
                     username: 'test',
                     password: 'test'
                 }
             });
-        toast.success("Artikel Berhasil Dihapus!");
-        getListArtikel();
+        toast.success("Berita Berhasil Dihapus!");
+        getListBerita();
         } catch (error) {
           console.log(error);
         }
     }
 
+    console.log(page, size);
+
     useEffect(() => {
-        getListArtikel();
-    }, [])    
+        getListBerita();
+        setNumberEntries(10);
+    }, []);
+      
 
   return (
     <div>
         <div className="flex">
             <div className="min-w-0 flex-1">
                 <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
-                    Berita & Aktivitas
+                    Berita management
                 </h2>
                 <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6">
                 </div>
             </div>
             <div className="lg:mt-0 lg:ml-4">
-                <Link to={"/clinic-app/admin/artikel/create"}>
+                <Link to={"/admin/berita/create"}>
                     <span className="sm:ml-3">
                         <button
                             type="button"
@@ -123,9 +127,9 @@ export default function NewsTable() {
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table className="w-full text-sm text-left text-gray-400 border-collapse border border-slate-500">
                 <thead className="text-xs uppercase bg-gray-50 text-gray-400">
-                    <tr>
+                    <tr> 
                         {head.map((value, index) => (
-                            <th key={index} scope="col" className="px-6 py-3">
+                            <th key={index} scope="col" colSpan={1} className="px-6 py-3" style={{width: '50px'}}>
                                 {value.title}
                             </th>
                         ))}
@@ -135,9 +139,9 @@ export default function NewsTable() {
                     { data !== [] && 
                         data.map((value, index) => (
                             <tr key={index} className="bg-white border-b border-gray-800">
-                                <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap border-b border-gray-800">
-                                    {value.article_title}
-                                </th>
+                                <td className="px-6 py-4 truncate" style={{width: '50px'}}>
+                                    {value.news_title}
+                                </td>
                                 <td className="px-6 py-4 border-b border-gray-800">
                                     <Moment format="DD MMMM YYYY hh:mm:ss">{value.created_at}</Moment>
                                     
@@ -152,9 +156,11 @@ export default function NewsTable() {
                                 </label>
                                 </td>
                                 <td className="flex items-center px-6 py-4 space-x-3">
-                                    <a href="#" className="font-medium text-white bg-blue-600 rounded-full text-center p-1">
-                                        <PencilSquareIcon className="h-5 w-5 hover:text-white" aria-hidden="false" />
-                                    </a>
+                                    <Link to={`/admin/berita/edit?id=${value.id}`} >   
+                                        <div className="font-medium text-white bg-blue-600 rounded-full text-center p-1">
+                                            <PencilSquareIcon className="h-5 w-5 hover:text-white" aria-hidden="false" />
+                                        </div>
+                                    </Link>
                                     <button type='button' onClick={() => onDelete(value.id)} className="font-medium text-white bg-red-600 rounded-full text-center p-1">
                                         <TrashIcon className="h-5 w-5 hover:text-white" aria-hidden="false" />
                                     </button>

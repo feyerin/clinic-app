@@ -37,7 +37,7 @@ export default function ArtikelEdit() {
         })
     }
   
-    const imageHandler = (e) => {
+    const imageHandler = () => {
         const editor = quillRef.current.getEditor();
         const input = document.createElement("input");
         input.setAttribute("type", "file");
@@ -125,7 +125,7 @@ export default function ArtikelEdit() {
             .then(() => {
                 toast.success("artikel successfuly updated");
                 setTimeout(() => {
-                    navigate("/clinic-app/admin/artikel")
+                    navigate("/admin/artikel")
                 })
             })
             .catch(function (error) {
@@ -227,7 +227,6 @@ export default function ArtikelEdit() {
                                 type="file" 
                                 name="thumbnail"
                                 onChange={e => handleFileRead(e)} 
-                                inputProps={{ accept: 'image/*' }}
                             />
                             </div>
                             <div className="sm:col-span-2">
@@ -256,7 +255,7 @@ export default function ArtikelEdit() {
                     </div>
                     <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
                         <button
-                            onClick={() => onClickPreview("/clinic-app/artikel-content-preview")}
+                            onClick={() => onClickPreview("/artikel-content-preview")}
                             type="button"
                             className="inline-flex justify-center rounded-md bg-green-600 py-2 px-3 mr-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
                             >

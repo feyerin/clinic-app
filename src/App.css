@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 .react-multi-carousel-dot--active button {
-  background-color: #8dbb00 !important;
-  border-color: #8dbb00 !important;
+  background-color: #7620ff !important;
+  border-color: #7620ff !important;
 }

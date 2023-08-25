@@ -14,7 +14,7 @@ import Moment from 'react-moment';
 export default function ArtikelTable() {
     const [page, setPage] = useState(1);
 	const [size, setSize] = useState(10);
-	const [numberEntries, setNumberEntries] = useState(10);
+	const [numberEntries, setNumberEntries] = useState(0);
     const [data, setData] = useState([]);
 
     const head = [
@@ -80,9 +80,12 @@ export default function ArtikelTable() {
         }
     }
 
+    console.log(page, size);
+
     useEffect(() => {
         getListArtikel();
-    }, [])
+        setNumberEntries(10);
+    }, []);
       
 
   return (
@@ -96,7 +99,7 @@ export default function ArtikelTable() {
                 </div>
             </div>
             <div className="lg:mt-0 lg:ml-4">
-                <Link to={"/clinic-app/admin/artikel/create"}>
+                <Link to={"/admin/artikel/create"}>
                     <span className="sm:ml-3">
                         <button
                             type="button"
@@ -153,7 +156,7 @@ export default function ArtikelTable() {
                                 </label>
                                 </td>
                                 <td className="flex items-center px-6 py-4 space-x-3">
-                                    <Link to={`/clinic-app/admin/artikel/edit?id=${value.id}`} >   
+                                    <Link to={`/admin/artikel/edit?id=${value.id}`} >   
                                         <div className="font-medium text-white bg-blue-600 rounded-full text-center p-1">
                                             <PencilSquareIcon className="h-5 w-5 hover:text-white" aria-hidden="false" />
                                         </div>

@@ -19,25 +19,24 @@ export default function Login() {
 		});
 	};
 
-    const onSubmit = async (data) => {
+    const onSubmit = async () => {
         try {
             await axios.post(`${process.env.REACT_APP_BASE_URL}/api/auth/login`, {
                 username: formAuthLogin.username,
                 password: formAuthLogin.password
             });
-            localStorage.setItem("login", true);
-            toast.success(`login berhasil`)
+            localStorage.setItem("isAuthenticated", true);
+            toast.success(`Login Berhasil`)
             
           } catch (error) {
             console.log(error);
             toast.error(`${error.response.data.message}`)
-          }
-      }  
+        }
+    }  
 
-      useEffect(() => {
-		const login = localStorage.getItem("login");
-		login === true && navigate("/clinic-app/admin");
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+    useEffect(() => {
+		const login = localStorage.getItem("isAuthenticated");
+		login === true && navigate("/admin");
 	}, []);
   
   return (
@@ -64,8 +63,6 @@ export default function Login() {
                             className=" w-full text-base px-4 py-2 border  border-gray-300 rounded-lg focus:outline-none focus:border-indigo-400" 
                             placeholder="Enter your username"
                             name="username"
-                            type=""
-                            id=""
                             onChange={(e) => changeTextInput(e)}
                         />
                     </div>
@@ -84,7 +81,7 @@ export default function Login() {
                     <div className="flex items-center justify-between">
                         <div className="flex items-center">
                         <input id="remember_me" name="remember_me" type="checkbox" className="h-4 w-4 bg-blue-500 focus:ring-blue-400 border-gray-300 rounded"/>
-                        <label for="remember_me" className="ml-2 block text-sm text-gray-800">
+                        <label htmlFor="remember_me" className="ml-2 block text-sm text-gray-800">
                             Remember me
                         </label>
                         </div>

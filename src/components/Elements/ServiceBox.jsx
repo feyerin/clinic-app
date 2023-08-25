@@ -1,38 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-// Assets
-import RollerIcon from "../../assets/svg/Services/RollerIcon";
-import MonitorIcon from "../../assets/svg/Services/MonitorIcon";
-import BrowserIcon from "../../assets/svg/Services/BrowserIcon";
-import PrinterIcon from "../../assets/svg/Services/PrinterIcon";
-import ProjectImg1 from "../../assets/img/projects/1.png";
 
-
-export default function ServiceBox({icon, title, subtitle}) {
-  let getIcon;
-
-  switch (icon) {
-    case "roller":
-      getIcon = <RollerIcon />;
-      break;
-    case "monitor":
-      getIcon = <MonitorIcon />;
-      break;
-    case "browser":
-      getIcon = <BrowserIcon />;
-      break;
-    case "printer":
-      getIcon = <PrinterIcon />;
-      break;
-    default:
-      getIcon = <RollerIcon />;
-      break;
-  }
-
-
+export default function ServiceBox({title, subtitle, image}) {
   return (
     <Wrapper className="flex flexColumn">
-      <img src={ProjectImg1}></img>
+      <img src={image}></img>
       <TitleStyle className="font20 extraBold">{title}</TitleStyle>
       <SubtitleStyle className="font13">{subtitle}</SubtitleStyle>
     </Wrapper>
@@ -41,11 +13,6 @@ export default function ServiceBox({icon, title, subtitle}) {
 
 const Wrapper = styled.div`
   width: 100%;
-`;
-const IconStyle = styled.div`
-  @media (max-width: 860px) {
-    margin: 0 auto;
-  }
 `;
 const TitleStyle = styled.h2`
   width: 100%;

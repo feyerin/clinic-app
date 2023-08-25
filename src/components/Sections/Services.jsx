@@ -1,35 +1,32 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import ClientSlider from "../Elements/ClientSlider";
 import ServiceBox from "../Elements/ServiceBox";
 import FullButton from "../Buttons/FullButton";
 // Assets
-import AddImage1 from "../../assets/img/add/1.png";
-import AddImage2 from "../../assets/img/add/2.png";
-import AddImage3 from "../../assets/img/add/3.png";
+import fasilitas2 from "../../assets/img/fasilitas/2.jpg";
 import AddImage4 from "../../assets/img/add/4.png";
+import fasilitas1 from "../../assets/img/fasilitas/1.jpg";
+import fasilitas5 from "../../assets/img/fasilitas/5.jpg";
+import fasilitas3 from "../../assets/img/fasilitas/3.jpg";
+import fasilitas4 from "../../assets/img/fasilitas/4.jpg";
+import fasilitas6 from "../../assets/img/fasilitas/6.jpg";
+import fasilitas7 from "../../assets/img/fasilitas/7.jpg";
+
 
 export default function Services() {
   return (
     
     <Wrapper id="services">
-      <div className="lightBg" style={{ padding: "50px 0" }}>
-        <div className="container">
-          {/* <ClientSlider /> */}
-        </div>
-      </div>
-      
       <div className="whiteBg" style={{ padding: "60px 0" }}>
       <div className="lightBg">
           <div className="container">
             <Advertising className="flexSpaceCenter">
               <AddLeft>
-                <h4 className="font15 semiBold">A few words about company</h4>
-                <h2 className="font40 extraBold">tentang klinik</h2>
+                <h4 className="font15 semiBold">Tentang Klinik </h4>
+                <h2 className="font40 extraBold">Inggit Garnasih</h2>
                 <p className="font12">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                  diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                  Klinik pratama inggit garnasih juga merupakan inisiasi dari Badan Amil Zakat Nasional Provinsi Jawa Barat (disingkat Baznas Jabar) yang diamanahi oleh Gubernur Jawa Barat sekaligus amanat dari Ibu Inggit Garnasih untuk memuliakan para lansia (Program Nyaah Ka Kolot).
                 </p>
                 <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
                   <div style={{ width: "190px", marginLeft: "0px" }}>
@@ -41,15 +38,15 @@ export default function Services() {
                 <AddRightInner>
                   <div className="flexNullCenter">
                     <AddImgWrapp1 className="flexCenter">
-                      <img src={AddImage1} alt="office" />
+                      <img src={fasilitas2} alt="office" />
                     </AddImgWrapp1>
                     <AddImgWrapp2>
-                      <img src={AddImage2} alt="office" />
+                      <img src={fasilitas6} alt="office" />
                     </AddImgWrapp2>
                   </div>
                   <div className="flexNullCenter">
                     <AddImgWrapp3>
-                      <img src={AddImage3} alt="office" />
+                      <img src={fasilitas7} alt="office" />
                     </AddImgWrapp3>
                     <AddImgWrapp4>
                       <img src={AddImage4} alt="office" />
@@ -73,27 +70,30 @@ export default function Services() {
           <ServiceBoxRow className="flex">
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="roller"
+                image={fasilitas1}
                 title="Graphic Design"
                 subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="monitor"
+                image={fasilitas5}
                 title="Web Design"
                 subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="browser"
+                image={fasilitas3}
                 title="Development"
                 subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
-              <ServiceBox icon="printer" title="Print" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
+              <ServiceBox 
+                image={fasilitas4}
+                title="Print" 
+                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
             </ServiceBoxWrapper>
           </ServiceBoxRow>
 

@@ -1,8 +1,9 @@
+import React from "react";
+import { Navigate } from "react-router-dom";
 import TopNavbar from "../components/Nav/TopNavbar";
 import Landing from "../screens/Landing";
 import Footer from "../components/Sections/Footer"
 import Profile from "../screens/Profile/Profile";
-import Dokter from "../screens/Dokter/Dokter";
 import ArtikelIndex from "../screens/Artikel/ArtikelIndex";
 import AdminLayout from "../components/Layout/admin";
 import ArtikelTable from "../screens/Admin/Artikel/ArtikelTable";
@@ -11,10 +12,13 @@ import LayananTable from "../screens/Admin/Layanan/LayananTable";
 import ArtikelCreate from "../screens/Admin/Artikel/ArtikelCreate";
 import ArtikelDetail from "../screens/Artikel/ArtikelDetail";
 import Login from "../screens/Admin/Auth//Login";
-import { Navigate } from "react-router-dom";
 import NewsCreate from "../screens/Admin/Berita/BeritaCreate";
 import NewsTable from "../screens/Admin/Berita/BeritaTable";
 import ArtikelEdit from "../screens/Admin/Artikel/ArtikelEdit";
+import BeritaIndex from "../screens/Berita/BeritaIndex";
+import BeritaDetail from "../screens/Berita/BeritaDetail";
+import JadwalIndex from "../screens/Jadwal/JadwalIndex";
+import SejabarIndex from "../screens/Sejabar/SejabarIndex";
 
 const routesConfig = [
   {
@@ -29,10 +33,10 @@ const routesConfig = [
       </>
   },
   {
-    path: "/clinic-app/",
+    path: "/",
     children: [
       {
-        path: "/clinic-app/",
+        path: "/",
         element: 
           <>
             <TopNavbar/>
@@ -50,20 +54,38 @@ const routesConfig = [
           </>
       },
       {
-        path: "dokter",
+        path: "jadwal",
         element: 
           <>
             <TopNavbar/>
-            <Dokter />
+            <JadwalIndex />
             <Footer/>
           </>
       },
       {
-        path: "dokter-preview",
+        path: "berita",
         element: 
           <>
             <TopNavbar/>
-            <Dokter />
+            <BeritaIndex />
+            <Footer/>
+          </>
+      },
+      {
+        path: "berita-content-preview",
+        element: 
+          <>
+            <TopNavbar/>
+            <BeritaDetail />
+            <Footer/>
+          </>
+      },
+      {
+        path: "berita-content/",
+        element: 
+          <>
+            <TopNavbar/>
+            <BeritaDetail />
             <Footer/>
           </>
       },
@@ -94,10 +116,19 @@ const routesConfig = [
             <Footer/>
           </>
       },
+      {
+        path: "sejabar",
+        element: 
+          <>
+            <TopNavbar/>
+            <SejabarIndex />
+            <Footer/>
+          </>
+      },
     ],
   },
   {
-    path: "/clinic-app/admin/",
+    path: "/admin/",
     element: <AdminLayout />,
     children: [
       {
@@ -108,14 +139,14 @@ const routesConfig = [
           </>
       },
       {
-        path: "dokter",
+        path: "berita",
         element: 
           <>
             <NewsTable/>
           </>
       },
       {
-        path: "dokter/create",
+        path: "berita/create",
         element: 
           <>
             <NewsCreate/>
@@ -153,7 +184,7 @@ const routesConfig = [
   },
   {
     path:"*",
-    element:<Navigate to="/clinic-app" replace />
+    element:<Navigate to="" replace />
   }
 ];
 

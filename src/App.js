@@ -1,6 +1,7 @@
+import React from 'react';
 import './App.css';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import routesConfig from './navigation/route';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
 function App() {
@@ -14,14 +15,14 @@ function App() {
   //       <TopNavbar />
   //       <Routes>
           
-  //         <Route path="/clinic-app/" element={<Landing />}/>
-  //         <Route path="/clinic-app/profil" element={<Profile />} />
-  //         <Route path="/clinic-app/dokter" element={<Dokter />} />
-  //         <Route path="/clinic-app/artikel" element={<ArtikelIndex />} />
+  //         <Route path="/" element={<Landing />}/>
+  //         <Route path="/profil" element={<Profile />} />
+  //         <Route path="/dokter" element={<Dokter />} />
+  //         <Route path="/artikel" element={<ArtikelIndex />} />
   //       </Routes>
   //       <Footer/>
   //       <Routes>
-  //         <Route path="/clinic-app/admin" element={<Index />}/>
+  //         <Route path="/admin" element={<Index />}/>
   //       </Routes>
   //     </Router>
   //   </>
