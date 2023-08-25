@@ -33,7 +33,7 @@ export default function SejabarConten() {
                             <dd className="mt-2 text-sm text-gray-500">Poli Umum merupakan salah satu pelayanan kedokteran berupa pemeriksaan kesehatan, pengobatan dan penyuluhan kepada pasien agar tidak terjadi penularan dan komplikasi penyakit. </dd>
                             </div>
                             <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-900">2. Pemeriksaan</dt>
+                            <dt className="font-medium text-gray-900">2. Pemeriksaan Darah</dt>
                             <dd className="mt-2 text-sm text-gray-500">Pemeriksaan Gula darah, Asam urat dan Kolesterol. Pemeriksaan kimia darah untuk mengetahui kadar gula darah, asam urat dan kolesterol .</dd>
                             </div>
                             <div className="border-t border-gray-200 pt-4">
@@ -45,12 +45,12 @@ export default function SejabarConten() {
                             <dd className="mt-2 text-sm text-gray-500">Hidroterapi Merupakan metode fisioterapi yang bertujuan mengurangi nyeri, penguatan otot dengan menggunakan media air.</dd>
                             </div>
                             <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-900">5. Obat Generik</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Obat generic yang diberikan kepada pasien untuk menunjang proses pengobatan dan penyembuhan pasien.</dd>
+                            <dt className="font-medium text-gray-900">5. Farmasi</dt>
+                            <dd className="mt-2 text-sm text-gray-500">Obat yang diberikan kepada pasien untuk menunjang proses pengobatan dan penyembuhan pasien.</dd>
                             </div>
                             <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-900">6. Hypnoterapi</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Hypnoterapi merupakan praktik yang bertujuan untuk membantu lebih dari puluhan permasalahan yang terjadi pada individu. menggunakan berbagai macam metode yang sangat efektif dalam membantu permasalahan pada seseorang, hypnoterapi bekerja dalam menghapus program-program negative yang bersarang pada otak manusia</dd>
+                            <dt className="font-medium text-gray-900">6. Hipnoterapi</dt>
+                            <dd className="mt-2 text-sm text-gray-500">Hipnoterapi merupakan praktik yang bertujuan untuk membantu lebih dari puluhan permasalahan yang terjadi pada individu. menggunakan berbagai macam metode yang sangat efektif dalam membantu permasalahan pada seseorang, hypnoterapi bekerja dalam menghapus program-program negative yang bersarang pada otak manusia</dd>
                             </div>
                            
                         </dl>
@@ -60,13 +60,13 @@ export default function SejabarConten() {
 
             <aside className="w-full md:w-1/3 flex flex-col items-center px-3">
                 <div className="w-full bg-white shadow flex flex-col my-4 p-6">
-                    <p className="text-sm font-semibold mb-2">Mitra yang sudah kerjasama :</p>
+                    <p className="text-sm font-semibold mb-2">Lokasi Layanan :</p>
                     <div className="w-full bg-gray-200 h-1 mb-5">
                       <div className="bg-primary h-1" style={{width: "20%"}}></div>
                     </div>
-                    <p className="text-sm text-gray-500 font-bold mb-1">Kota Bandung </p>
-                    <p className="text-sm text-gray-500 mb-1">Klinik Pratama Inggit Garnasih </p>
-                    <a href="https://goo.gl/maps/y8h9x3VLGRfgf75n9" className="text-sm text-gray-500">Jl. Flores no.6 , Kel Citarum Kec Bandung Wetan.Kota Bandung</a>
+                    <p className="text-sm text-gray-700 font-bold mb-1">Kota Bandung </p>
+                    <p className="text-sm text-gray-900 mb-1">Klinik Pratama Inggit Garnasih </p>
+                    <a href="https://goo.gl/maps/y8h9x3VLGRfgf75n9" className="text-sm text-gray-900">Jl. Flores no.6 , Kel Citarum Kec Bandung Wetan.Kota Bandung</a>
 
                     <a href="https://wa.me/628112440606" className="w-full bg-primary text-white hover:text-white font-bold text-sm uppercase rounded flex items-center justify-center px-2 py-3 mt-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-whatsapp mr-3" viewBox="0 0 16 16"> <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/> </svg>

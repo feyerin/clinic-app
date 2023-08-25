@@ -4,7 +4,7 @@ import styled from "styled-components";
 // import FullButton from "../Buttons/FullButton";
 // // Assets
 // import carousel1 from "../../assets/img/carousel-1.png";
-// import carousel2 from "../../assets/img/carousel-2.jpg";
+import banner from "../../assets/img/banner.jpg";
 
 //carousel
 import Carousel from "react-multi-carousel";
@@ -63,7 +63,7 @@ export default function Header() {
         customDot={<CustomDots />}
         dotListclassName={"relative "}
       >
-        <div style={{backgroundImage: `url(https://dummyimage.com/1200x600/b9bad4/fff)`, height:"100%", backgroundPosition:"center", backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
+        <div style={{backgroundImage: `url(${banner})`, height:"100%", backgroundPosition:"center", backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
           <Wrapper id="home" className="container flexSpaceCenter">
             {/* <LeftSide className="flexCenter">
               <div>

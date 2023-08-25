@@ -59,7 +59,7 @@ export default function Services() {
         </div>
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">fasilitas klinik</h1>
+            <h1 className="font40 extraBold">Fasilitas Klinik</h1>
             <p className="font13">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
               <br />
