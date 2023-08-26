@@ -4,7 +4,7 @@ import styled from "styled-components";
 export default function ServiceBox({title, subtitle, image}) {
   return (
     <Wrapper className="flex flexColumn">
-      <img src={image}></img>
+      <img src={image} className="radius8"></img>
       <TitleStyle className="font20 extraBold">{title}</TitleStyle>
       <SubtitleStyle className="font13">{subtitle}</SubtitleStyle>
     </Wrapper>

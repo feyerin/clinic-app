@@ -2,25 +2,18 @@ import React from "react";
 import fasilitas2 from "../../../assets/img/fasilitas/2.jpg";
 import fasilitas6 from "../../../assets/img/fasilitas/6.jpg";
 import fasilitas7 from "../../../assets/img/fasilitas/7.jpg";
-
-// const features = [
-//   { name: 'Origin', description: 'Designed by Good Goods, Inc.' },
-//   { name: 'Material', description: 'Solid walnut base with rare earth magnets and powder coated steel card cover' },
-//   { name: 'Dimensions', description: '6.25" x 3.55" x 1.15"' },
-//   { name: 'Finish', description: 'Hand sanded and finished with natural oil' },
-//   { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
-//   { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' },
-// ]
+import baznas from "../../../assets/img/clients/baznas.png";
+import bjb from "../../../assets/img/clients/bank-bjb.png";
 
 export default function ProfileContent() {
   return (
     <div>
       <section className="bg-white">
           <div className="shadow gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-              <div className="font-light font-sans text-gray-500 sm:text-md">
+              <div className="text-gray-500 sm:text-md">
                   <h2 className="mb-10 text-4xl tracking-tight font-extrabold text-gray-900">Tentang Klinik Inggit Garnasih</h2>
-                  <p className="mb-10">Klinik Pratama Inggit Garnasih adalah Klinik pratama yang resmi didirikan di jalan flores nomor 6, kota bandung. Klinik tersebut didirikan sebagai komitmen pemerintah provinsi jawa barat dalam merealisasikan wasiat dari ibu inggit garnasih khususnya dalam pelayanan terhadap lansia. </p>
-                  <p className="mt-10">Klinik pratama inggit garnasih juga merupakan inisiasi dari Badan Amil Zakat Nasional Provinsi Jawa Barat (disingkat BAZNAS JABAR) yang diamanahi oleh Gubernur Jawa Barat sekaligus amanat dari Ibu Inggit Garnasih untuk memuliakan para lansia (Program Nyaah Ka Kolot).</p>
+                  <p className="mb-10 text-gray-500">Klinik Pratama Inggit Garnasih adalah Klinik pratama yang resmi didirikan di jalan flores nomor 6, kota bandung. Klinik tersebut didirikan sebagai komitmen pemerintah provinsi jawa barat dalam merealisasikan wasiat dari ibu inggit garnasih khususnya dalam pelayanan terhadap lansia. </p>
+                  <p className="mt-10 text-gray-500">Klinik pratama inggit garnasih juga merupakan inisiasi dari Badan Amil Zakat Nasional Provinsi Jawa Barat (disingkat BAZNAS JABAR) yang diamanahi oleh Gubernur Jawa Barat sekaligus amanat dari Ibu Inggit Garnasih untuk memuliakan para lansia (Program Nyaah Ka Kolot).</p>
               </div>
               <div className="grid grid-cols-2 gap-4 mt-8">
                   <img className="w-full rounded-lg" src={fasilitas2} alt="office content 1"/>
@@ -120,6 +113,16 @@ export default function ProfileContent() {
             </div>
         </div>
       </div>
+
+      <div className="lightBg py-6">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">Trusted by the world’s most innovative teams</h2>
+            <div className="mx-auto mt-10 grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-4 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+              <img className="col-span-2 max-h-20 w-full object-contain lg:col-span-1" src={baznas} alt="Transistor" width={258} height={148}/>
+              <img className="col-span-2 max-h-20 w-full object-contain lg:col-span-1" src={bjb} alt="Reform" width={258} height={348}/>
+            </div>
+          </div>
+        </div>
     </div>
 
   )

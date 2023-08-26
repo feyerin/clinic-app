@@ -9,12 +9,12 @@ export default function SejabarConten() {
             <section className="w-full md:w-2/3 flex flex-col items-center px-3">
                 <article className="flex flex-col shadow my-4">
                     <div className="bg-white flex flex-col justify-start p-6">
-                        <span href="#" className="lg:text-2xl md:text-2xl sm:text-xl font-bold hover:text-gray-700 mb-2">SEJABAR “Sehat Jagjag Babarengan”</span>
+                        <span className="mb-2 text-4xl tracking-tight font-extrabold text-gray-900">SEJABAR “Sehat Jagjag Babarengan”</span>
                         <div className="w-full bg-white h-1 mb-5">
                            <div className="bg-primary h-1" style={{width: "15%"}}></div>
                         </div>
                         <p className="text-[10px]">
-                            By <span href="#" className="font-semibold text-primary">Klinik Inggit Garnasih</span>, Published on 25 Agustus 2023
+                            By <span className="font-semibold text-primary">Klinik Inggit Garnasih</span>, Published on 25 Agustus 2023
                         </p>
                     </div>
                     <div className="hover:opacity-75 pl-6 pr-6 pb-6">
@@ -23,7 +23,7 @@ export default function SejabarConten() {
                     
 
                     <div className='p-6'>
-                        <p className=" text-gray-500">Kartu Sejabar adalah Kartu Sehat yang diperuntukkan bagi Pensiunan ASN Provinsi Jawa Barat yang telah 
+                        <p className=" text-gray-700">Kartu Sejabar adalah Kartu Sehat yang diperuntukkan bagi Pensiunan ASN Provinsi Jawa Barat yang telah 
                         berkontribusi dalam pengelolaan Zakat di Badan Amil Zakat Nasional (BAZNAS) Provinsi Jawa Bara</p>
 
                         <p className="mt-16 font-semibold text-gray-900">Pelayanan Kartu Sejabar :</p>

@@ -8,29 +8,29 @@ export default function Contact() {
                 <div className="mb-6 md:mb-0">
                     <a href="https://flowbite.com/" className="flex items-center">
                         <img src={LogoIcon} className="h-16 mr-3" alt="FlowBite Logo" />
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">INGGIT GARNASIH</span>
+                        <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">INGGIT GARNASIH</span>
                     </a>
                 </div>
                 <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
                     <div>
-                        <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-                        <ul className="text-gray-600 dark:text-gray-400">
+                        <h2 className="mb-6 text-sm font-semibold uppercase text-white">Follow us</h2>
+                        <ul className="text-gray-400">
                             <li className="mb-4">
-                                <a href="https://github.com/themesberg/flowbite" className="hover:underline dark:text-white">Instagram</a>
+                                <a href="https://github.com/themesberg/flowbite" className="hover:underline text-white">Instagram</a>
                             </li>
                             <li>
-                                <a href="https://discord.gg/4eeurUVvTy" className="hover:underline dark:text-white">Facebook</a>
+                                <a href="https://discord.gg/4eeurUVvTy" className="hover:underline text-white">Facebook</a>
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-                        <ul className="text-gray-600 dark:text-gray-400">
+                        <h2 className="mb-6 text-sm font-semibold uppercase text-white">Legal</h2>
+                        <ul className=" text-gray-400">
                             <li className="mb-4">
-                                <a href="#" className="hover:underline dark:text-white">Privacy Policy</a>
+                                <a href="#" className="hover:underline text-white">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="#" className="hover:underline dark:text-white">Terms &amp; Conditions</a>
+                                <a href="#" className="hover:underline text-white">Terms &amp; Conditions</a>
                             </li>
                         </ul>
                     </div>

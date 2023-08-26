@@ -2,68 +2,60 @@ import React from "react";
 import styled from "styled-components";
 // Components
 import ServiceBox from "../Elements/ServiceBox";
-import FullButton from "../Buttons/FullButton";
 // Assets
-import fasilitas2 from "../../assets/img/fasilitas/2.jpg";
-import AddImage4 from "../../assets/img/add/4.png";
 import fasilitas1 from "../../assets/img/fasilitas/1.jpg";
 import fasilitas5 from "../../assets/img/fasilitas/5.jpg";
 import fasilitas3 from "../../assets/img/fasilitas/3.jpg";
 import fasilitas4 from "../../assets/img/fasilitas/4.jpg";
-import fasilitas6 from "../../assets/img/fasilitas/6.jpg";
-import fasilitas7 from "../../assets/img/fasilitas/7.jpg";
+import baznas from "../../assets/img/clients/baznas.png";
+import bjb from "../../assets/img/clients/bank-bjb.png";
+
+import { ChevronRightIcon } from '@heroicons/react/24/outline'
 
 
 export default function Services() {
   return (
-    
     <Wrapper id="services">
-      <div className="whiteBg" style={{ padding: "60px 0" }}>
-      <div className="lightBg">
+
+      <div>
+
+        <div className="bg-white py-12">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">Trusted by the world’s most innovative teams</h2>
+            <div className="mx-auto mt-10 grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-4 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+              <img className="col-span-2 max-h-24 w-full object-contain lg:col-span-1" src={baznas} alt="Transistor" width={258} height={148}/>
+              <img className="col-span-2 max-h-24 w-full object-contain lg:col-span-1" src={bjb} alt="Reform" width={258} height={348}/>
+            </div>
+          </div>
+        </div>
+
+        <section className="lightBg">
           <div className="container">
             <Advertising className="flexSpaceCenter">
               <AddLeft>
-                <h4 className="font15 semiBold">Tentang Klinik </h4>
-                <h2 className="font40 extraBold">Inggit Garnasih</h2>
-                <p className="font12">
-                  Klinik pratama inggit garnasih juga merupakan inisiasi dari Badan Amil Zakat Nasional Provinsi Jawa Barat (disingkat Baznas Jabar) yang diamanahi oleh Gubernur Jawa Barat sekaligus amanat dari Ibu Inggit Garnasih untuk memuliakan para lansia (Program Nyaah Ka Kolot).
+                <h2 className="text-lg font-semibold text-primary">Tentang Klinik </h2>
+                <h1 className="extraBold text-[36px] tracking-wide">Pratama Inggit Garnasih</h1>
+                <p className="font15 font-Inter leading-loose	mt-5 font-semibold text-gray-500">
+                  <span className="text-primary">Klinik pratama inggit garnasih </span> merupakan inisiasi dari Badan Amil Zakat Nasional Provinsi Jawa Barat (disingkat Baznas Jabar) yang diamanahi oleh Gubernur Jawa Barat sekaligus amanat dari Ibu Inggit Garnasih untuk memuliakan para lansia (Program Nyaah Ka Kolot).
                 </p>
-                <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
-                  <div style={{ width: "190px", marginLeft: "0px" }}>
-                    <FullButton title="Lihat Selengkapnya" action={() => alert("clicked")} border />
-                  </div>
-                </ButtonsRow>
+                <div className="mt-10" style={{ width: "190px" }}>
+                  <button className="text-primary flex rounded-full border-solid border-2 border-primary p-4">Selengkapnya <ChevronRightIcon className="h-6 w-6"/></button>
+                </div>
               </AddLeft>
               <AddRight>
-                <AddRightInner>
-                  <div className="flexNullCenter">
-                    <AddImgWrapp1 className="flexCenter">
-                      <img src={fasilitas2} alt="office" />
-                    </AddImgWrapp1>
-                    <AddImgWrapp2>
-                      <img src={fasilitas6} alt="office" />
-                    </AddImgWrapp2>
-                  </div>
-                  <div className="flexNullCenter">
-                    <AddImgWrapp3>
-                      <img src={fasilitas7} alt="office" />
-                    </AddImgWrapp3>
-                    <AddImgWrapp4>
-                      <img src={AddImage4} alt="office" />
-                    </AddImgWrapp4>
-                  </div>
-                </AddRightInner>
+                <img className="radius8" src={fasilitas4} width={2000} height={600} alt="add" />
               </AddRight>
             </Advertising>
           </div>
-        </div>
-        <div className="container">
+        </section>
+
+        <section className="container animate-fade-up">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Fasilitas Klinik</h1>
-            <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            <h1 className="font40 extraBold tracking-wide sm:mt-10">Fasilitas Klinik</h1>
+            <p className="font15 font-Inter leading-loose	mt-5 font-semibold text-gray-500">
+              <span className="text-primary">Klinik pratama inggit garnasih </span> Difasilitasi dengan sarana & prasarana yang lengkap dan nyaman
               <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              sesuai dengan standar klinik di indonesia.
             </p>
           </HeaderInfo>
           
@@ -72,7 +64,7 @@ export default function Services() {
               <ServiceBox
                 image={fasilitas1}
                 title="Graphic Design"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+                subtitle="Lorem ipsum dolor sit amet"
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
@@ -97,10 +89,10 @@ export default function Services() {
             </ServiceBoxWrapper>
           </ServiceBoxRow>
 
-          <div style={{ width: "190px", marginLeft: "15px" }}>
-            <FullButton title="See more" action={() => alert("clicked")} border />
+          <div style={{ width: "190px" }}>
+            <button className="text-primary flex rounded-full border-solid border-2 border-primary p-4">Selengkapnya <ChevronRightIcon className="h-6 w-6"/></button>
           </div>
-        </div>
+        </section>
       </div>
     </Wrapper>
   );
@@ -142,11 +134,6 @@ const Advertising = styled.div`
     margin: 80px 0 0px 0;
   }
 `;
-const ButtonsRow = styled.div`
-  @media (max-width: 860px) {
-    justify-content: space-between;
-  }
-`;
 const AddLeft = styled.div`
   width: 50%;
   p {
@@ -168,63 +155,11 @@ const AddLeft = styled.div`
 const AddRight = styled.div`
   width: 50%;
   position: absolute;
-  top: -70px;
   right: 0;
   @media (max-width: 860px) {
     width: 80%;
     position: relative;
     order: 1;
     top: -40px;
-  }
-`;
-const AddRightInner = styled.div`
-  width: 100%;
-`;
-const AddImgWrapp1 = styled.div`
-  width: 48%;
-  margin: 0 6% 10px 6%;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;
-const AddImgWrapp2 = styled.div`
-  width: 30%;
-  margin: 0 5% 10px 5%;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;
-const AddImgWrapp3 = styled.div`
-  width: 20%;
-  margin-left: 40%;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;
-const AddImgWrapp4 = styled.div`
-  width: 30%;
-  margin: 0 5%auto;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
   }
 `;

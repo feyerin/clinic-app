@@ -19,10 +19,9 @@ module.exports = {
         successDarker: "#005518",
       },
       fontFamily: {
-        sans: ["DM Sans", "sans-serif", ...defaultTheme.fontFamily.sans],
-        serif: ["Helvetica Neue", "serif"],
-        gilroy: ["Gilroy", "sans-serif"],
-        Khula: ["Khula", "sans-serif"]
+        Satisfy: ["Satisfy", "cursive"],
+        Inter: ["Inter", "cursive"],
+        Manrope: ["Manrope", "cursive"]
       },
       screens: {
         sm: "576px",
@@ -39,6 +38,7 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require("@tailwindcss/line-clamp"),
+    require('tailwindcss-animated'),
     function ({ addComponents }) {
       addComponents({
         ".container": {
