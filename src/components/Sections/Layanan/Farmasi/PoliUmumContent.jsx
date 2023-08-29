@@ -1,6 +1,4 @@
 import React from 'react';
-import fasilitas4 from "../../../../assets/img/fasilitas/4.jpg";
-import fasilitas5 from "../../../../assets/img/fasilitas/5.jpg";
 
 // heroicons
 import { ChevronRightIcon } from '@heroicons/react/24/outline';
@@ -8,11 +6,12 @@ import { ChevronRightIcon } from '@heroicons/react/24/outline';
 const layanan = [
     { name: 'Poli Umum', description: 'Pelayanan Medis Dasar Menyeluruh, Pengobatan dasar umum/farmasi, Penyuluhan/konseling/edukasi, Ramah Lansia', href: '/poli-umum' },
     { name: 'Fisioterapi + Hidroterapi', description: '', href: '/fisioterapi' },
-    { name: 'Labolatorium', description: '', href: '/labolatorium' },
-    { name: 'Instalasi Farmasi ', description: 'Pelayanan informasi obat, Konseling Obat, Home Pharmacy Care', href: '/farmasi'},
-]
+    { name: 'Labolatorium', description: '', href: 'labolatorium' },
+    { name: 'Instalasi Farmasi ', description: 'Pelayanan informasi obat, Konseling Obat, Home Pharmacy Care', href: 'farmasi'},
+  ]
   
-export default function PoliUmumContent() {
+
+export default function FarmasiContent() {
     const url = window.location.href;
 
     return (
@@ -20,7 +19,7 @@ export default function PoliUmumContent() {
             <section className="w-full md:w-2/3 flex flex-col items-center px-3">
                 <article className="flex flex-col shadow my-4">
                     <div className="bg-white flex flex-col justify-start p-6">
-                        <span className="mb-2 text-4xl tracking-tight font-extrabold text-gray-900">Layanan Poli Umum</span>
+                        <span className="mb-2 text-4xl tracking-tight font-extrabold text-gray-900">Layanan Instalasi Farmasi</span>
                         <div className="w-full h-1 mb-5">
                            <div className="bg-primary h-1" style={{width: "15%"}}></div>
                         </div>
@@ -30,24 +29,17 @@ export default function PoliUmumContent() {
                     </div>
             
                     <div className='p-6 bg-white'>
-                        <p className="text-gray-700">Poli umum merupakan tempat pelayanan yang bertugas melakukan pemeriksaan pasien secara umum  atau menyeluruh, dengan melihat indikasi atau gejala – gejala yang di derita oleh pasien. </p>
+                        <p className="text-gray-700">•	Menerima resep dokter</p>
                         
-                        <p className="text-gray-700 mt-9">Poli umum dilayani oleh Dokter Umum dan Perawat yang bertugas melakukan anamnesa dan diagnosa awal terhadap pasien, sehingga dapat memberikan pelayanan yang sesuai standar dan dapat di pertanggungjawabkan dalam mendiagnosa setiap keluhan pada pasien yang berkunjung dipoli umum. </p>
+                        <p className="text-gray-700 mt-9">•	Pelayanan obat dan alat Kesehatan</p>
 
-                        <div className="grid grid-cols-2 gap-6 mt-7 pr-4">
-                            <div>
-                                <img src={fasilitas5} className="rounded h-56 animate-fade-right animate-once animate-delay-100 animate-ease-in" crossOrigin="anonymous"/>
-                            </div>
-                            <div>
-                                <img src={fasilitas4} className="rounded h-56 animate-fade-right animate-once animate-delay-100 animate-ease-in" crossOrigin="anonymous"/>
-                            </div>
-                        </div>
+                        <p className="text-gray-700 mt-9">•	Pelayanan informasi obat (PIO)</p>
 
-                        <p className="text-gray-700 mt-9">Poli umum ini juga menangani pasien secara menyeluruh dari segala jenis umur dan dari semua kalangan, baik dari bayi, batita, balita, remaja, dewasa bahkan lanjut usia. </p>
+                        <p className="text-gray-700 mt-9">•	Konseling</p>
 
-                        <p className="text-gray-700 mt-9">Poli umum, dapat menerima rujukan dari luar klinik, baik rujukan rawat jalan, rujukan fisioterapi/hidroterapi maupun rujukan laboratorium. </p>
-
-                       
+                        <p className="text-gray-700 mt-9">•	Home Pharmacy Care</p>
+                        
+                        <p className="text-gray-700 invisible">Laboratorium klinik adalah laboratorium kesehatan yang melaksanakan pelayanan pemeriksaan spesimen klinik untuk mendapatkan informasi tentang kesehatan perorangan terutama untuk menunjang upaya diagnosis penyakit,dan memulihkan kesehatan .</p>
                     </div>
                 </article>
             </section>

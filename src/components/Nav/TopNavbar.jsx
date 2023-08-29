@@ -12,7 +12,6 @@ import {
   MapPinIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Link } from 'react-router-dom'
 import LogoIcon from "../../assets/img/logo-clinic.png";
 
 
@@ -23,17 +22,20 @@ import LogoIcon from "../../assets/img/logo-clinic.png";
 
 const services = [
   { name: 'Poli Umum', description: 'Pelayanan Medis Dasar Menyeluruh, Pengobatan dasar umum/farmasi, Penyuluhan/konseling/edukasi, Ramah Lansia', href: '/poli-umum', icon: ChartPieIcon },
-  { name: 'Fisioterapi + Hidroterapi', description: '', href: '#', icon: BuildingLibraryIcon },
-  { name: 'Labolatorium', description: '', href: '#', icon: FingerPrintIcon },
-  { name: 'Instalasi Farmasi ', description: 'Pelayanan informasi obat, Konseling Obat, Home Pharmacy Care', href: '#', icon: SquaresPlusIcon },
+  { name: 'Fisioterapi + Hidroterapi', description: '', href: '/fisioterapi', icon: BuildingLibraryIcon },
+  { name: 'Labolatorium', description: '', href: '/labolatorium', icon: FingerPrintIcon },
+  { name: 'Instalasi Farmasi ', description: 'Pelayanan informasi obat, Konseling Obat, Home Pharmacy Care', href: '/farmasi', icon: SquaresPlusIcon },
 ]
 
 // function classNames(...classes) {
 //   return classes.filter(Boolean).join(' ')
 // }
 
+let menuArray = [false, false, false];
+
 export default function TopNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [menu, setMenu] = useState(menuArray);
   const [y, setY] = useState(window.scrollY);
 
   useEffect(() => {
@@ -43,19 +45,25 @@ export default function TopNavbar() {
     };
   }, [y]);
 
+  const setMenuValue = (props) => {
+    let newArr = [...menu];
+    newArr[props] = !newArr[props];
+    setMenu(newArr);
+  }
+
 
   return (
     <>
       <Wrapper2 className="animate" style={y > 100 ? { visibility: "hidden" } : { height: "80px" }}>
           <div className="relative isolate flex gap-x-6 overflow-hidden bg-gray-200 px-6 py-2.5 sm:px-3.5">    
-            <div className="">
-                <a href="https://goo.gl/maps/y8h9x3VLGRfgf75n9" className="px-3.5 py-1 text-sm font-semibold text-primary flex">
+            <div className="lg:inline hidden">
+                <a href="https://goo.gl/maps/y8h9x3VLGRfgf75n9" className=" px-3.5 py-1 text-sm font-semibold text-primary flex">
                  <MapPinIcon className="h-5 w-5"/> Jl. Flores No.6, Citarum, Kec. Bandung Wetan, Kota Bandung: +62811-2440-606
                 </a>
             </div>
             <div className="flex flex-1 justify-end">
               <button type="button" className="mb-3">
-                <a href="#" className="flex rounded-full bg-primary px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">
+                <a href="https://wa.me/628112440606" className="flex rounded-full bg-primary px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">
                   Book Appointment
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-whatsapp ml-3 mt-0.5" viewBox="0 0 16 16"> <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/> </svg>
                 </a>
@@ -75,14 +83,14 @@ export default function TopNavbar() {
           </div>
           <Popover.Group className="hidden lg:flex lg:gap-x-12 lg:pr-30">
             <a href="/" className="text-sm font-semibold leading-6 text-gray-900">
-              Home
+              Beranda
             </a>
             <a href="/profil" className="text-sm font-semibold leading-6 text-gray-900">
-              Profil
+              Tentang Kami
             </a>
             <Popover className="relative">
               <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-                Layanan
+                Layanan Kami
                 <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
               </Popover.Button>
 
@@ -196,20 +204,50 @@ export default function TopNavbar() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="py-6">
-                  <Link to={"/"} onClick={() => setMobileMenuOpen(false)} className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                    Home
-                  </Link>
+                  <a href="/" onClick={() => setMobileMenuOpen(false)} className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                    Beranda
+                  </a>
                   <hr className="h-0.5 mx-auto bg-gray-200 border-0 rounded"/>
-                  <Link to={"/profil"}>
-                    <a
-                      onClick={() => setMobileMenuOpen(false)}
-                      href="#"
-                      className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Profil
-                    </a>
-                  </Link>
+                  <a
+                    onClick={() => setMobileMenuOpen(false)}
+                    href="/profil"
+                    className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Tentang Kami
+                  </a>
                   <hr className="h-0.5 mx-auto bg-gray-200 border-0 rounded"/>
+                  <div>
+                      <a onClick={()=>setMenuValue(0)} href="#" className="flex -mx-3 rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                        Layanan Kami
+                        <span className="mt-0.5">
+                            <svg id="icon1" className={`${menu[0] ? '' : 'rotate-180'} transform duration-100`} width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 15L12 9L6 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </span>
+                      </a>
+                      <hr className="h-0.5 mx-auto bg-gray-200 border-0 rounded"/>
+
+                      <div id="menu1" className={`${menu[0] ? 'flex' : 'hidden'} justify-start flex-col w-full md:w-auto items-start pb-1`}>
+                          <a href='/poli-umum' className="flex justify-start items-center space-x-6 hover:text-primary text-gray-700 rounded px-3 py-2 w-full">
+                              <p className="text-base leading-4  ">Poli Umum</p>
+                          </a>
+                          <hr className="h-0.5 mx-auto bg-gray-200 border-0 rounded"/>
+                          <a href='/fisioterapi' className="flex justify-start items-center hover:text-primary text-gray-700 rounded px-3 py-2 w-full">
+                              <p className="text-base leading-4  ">Fisioterapi + Hidroterapi</p>
+                          </a>
+                          <hr className="h-0.5 mx-auto bg-gray-200 border-0 rounded"/>
+                          <a href='/labolatorium' className="flex justify-start items-center space-x-6 hover:text-primary text-gray-700 rounded px-3 py-2 w-full">
+                              <p className="text-base leading-4  ">Laboratorium </p>
+                          </a>
+                          <hr className="h-0.5 mx-auto bg-gray-200 border-0 rounded"/>
+                          <a href='/farmasi' className="flex justify-start items-center space-x-6 hover:text-primary text-gray-700 rounded px-3 py-2 w-full">
+                              <p className="text-base leading-4  ">Instalasi Farmasi </p>
+                          </a>
+                          <hr className="h-0.5 mx-auto bg-gray-200 border-0 rounded"/>
+                      </div>
+                      <hr className={`${menu[0] ? 'flex' : 'hidden'} h-0.5 mx-auto bg-gray-200 border-0 rounded`}/>
+                  </div>
+
 
                   {/* <Disclosure as="div" className="-mx-3">
                     {({ open }) => (
@@ -246,15 +284,13 @@ export default function TopNavbar() {
                   >
                     Berita & Aktivitas
                   </a> */}
-                  <Link to={"/sejabar"}>
-                    <a
-                      onClick={() => setMobileMenuOpen(false)}
-                      href="#"
-                      className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Sejabar
-                    </a>
-                  </Link>
+                  <a
+                    onClick={() => setMobileMenuOpen(false)}
+                    href="/sejabar"
+                    className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Sejabar
+                  </a>
                 </div>
               </div>
             </div>

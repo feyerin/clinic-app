@@ -1,6 +1,6 @@
 import React from 'react';
 import fasilitas4 from "../../../../assets/img/fasilitas/4.jpg";
-import fasilitas5 from "../../../../assets/img/fasilitas/5.jpg";
+import fasilitas3 from "../../../../assets/img/fasilitas/3.jpg";
 
 // heroicons
 import { ChevronRightIcon } from '@heroicons/react/24/outline';
@@ -10,9 +10,10 @@ const layanan = [
     { name: 'Fisioterapi + Hidroterapi', description: '', href: '/fisioterapi' },
     { name: 'Labolatorium', description: '', href: '/labolatorium' },
     { name: 'Instalasi Farmasi ', description: 'Pelayanan informasi obat, Konseling Obat, Home Pharmacy Care', href: '/farmasi'},
-]
+  ]
   
-export default function PoliUmumContent() {
+
+export default function FisioterapiContent() {
     const url = window.location.href;
 
     return (
@@ -20,7 +21,7 @@ export default function PoliUmumContent() {
             <section className="w-full md:w-2/3 flex flex-col items-center px-3">
                 <article className="flex flex-col shadow my-4">
                     <div className="bg-white flex flex-col justify-start p-6">
-                        <span className="mb-2 text-4xl tracking-tight font-extrabold text-gray-900">Layanan Poli Umum</span>
+                        <span className="mb-2 text-4xl tracking-tight font-extrabold text-gray-900">Layanan Fisioterapi & Hidroterapi</span>
                         <div className="w-full h-1 mb-5">
                            <div className="bg-primary h-1" style={{width: "15%"}}></div>
                         </div>
@@ -30,24 +31,29 @@ export default function PoliUmumContent() {
                     </div>
             
                     <div className='p-6 bg-white'>
-                        <p className="text-gray-700">Poli umum merupakan tempat pelayanan yang bertugas melakukan pemeriksaan pasien secara umum  atau menyeluruh, dengan melihat indikasi atau gejala – gejala yang di derita oleh pasien. </p>
+                        <p className="text-gray-700">Fisioterapi adalah tindakan rehabilitasi untuk menghindari atau meminimalkan keterbatasan fisik akibat cedera atau penyakit. Fisioterapi bisa dilakukan pada pasien dari semua rentang usia dengan berbagai macam tujuan, mulai dari meredakan sakit punggung hingga persiapan olahraga dan persalinan.</p>
                         
-                        <p className="text-gray-700 mt-9">Poli umum dilayani oleh Dokter Umum dan Perawat yang bertugas melakukan anamnesa dan diagnosa awal terhadap pasien, sehingga dapat memberikan pelayanan yang sesuai standar dan dapat di pertanggungjawabkan dalam mendiagnosa setiap keluhan pada pasien yang berkunjung dipoli umum. </p>
+                        <p className="text-gray-700 mt-9">Fisioterapi yang memberikan pelayanan dalam menangani kondisi pada lansia, orang dewasa, maupun anak-anak untuk masalah-masalah seperti post stroke, sakit pinggang, sakit bahu, sakit lutut, pasca operasi, cedera olahraga, serta masalah-masalah gerak dan fungsi tubuh lainnya.</p>
 
                         <div className="grid grid-cols-2 gap-6 mt-7 pr-4">
                             <div>
-                                <img src={fasilitas5} className="rounded h-56 animate-fade-right animate-once animate-delay-100 animate-ease-in" crossOrigin="anonymous"/>
+                                <img src={fasilitas3} className="rounded h-56 animate-fade-right animate-once animate-delay-100 animate-ease-in" crossOrigin="anonymous"/>
                             </div>
                             <div>
                                 <img src={fasilitas4} className="rounded h-56 animate-fade-right animate-once animate-delay-100 animate-ease-in" crossOrigin="anonymous"/>
                             </div>
                         </div>
 
-                        <p className="text-gray-700 mt-9">Poli umum ini juga menangani pasien secara menyeluruh dari segala jenis umur dan dari semua kalangan, baik dari bayi, batita, balita, remaja, dewasa bahkan lanjut usia. </p>
+                        <p className="text-gray-700 mt-9">Pada dasarnya, tujuan fisioterapi adalah mengembalikan fungsi tubuh yang normal setelah terkena penyakit atau cedera. Jika tubuh menderita penyakit atau cedera permanen, fisioterapi dapat dilakukan untuk mengurangi dampaknya. Tindakan fisioterapi bisa dilakukan dengan berbagai cara, baik itu penanganan secara manual maupun menggunakan alat.</p>
 
-                        <p className="text-gray-700 mt-9">Poli umum, dapat menerima rujukan dari luar klinik, baik rujukan rawat jalan, rujukan fisioterapi/hidroterapi maupun rujukan laboratorium. </p>
+                        <p className="text-gray-700 mt-9">Terdapat beberapa kondisi pasien yang membutuhkan fisioterapi seperti gangguan sistem saraf, gangguan pada otot kerangka tubuh, penyakit kardiovaskular, dan gangguan pernafasan.</p>
 
-                       
+                        <p className="text-gray-700 mt-9">Hidroterapi: layanan terapi yang dilakukan di dalam kolam yang berisi air hangat  serta terdapat arus dalam kolam</p>
+
+                        <p className="text-gray-700 mt-9">Elektroterapi: layanan terapi menggunakan modalitas berupa infra red, tens, ultrasound, mwd, traksi</p>
+
+                        <p className="text-gray-700 mt-9">Latihan: layanan terapi yang dilakukan dengan menggunakan gerak tubuh baik secara aktif maupun pasif.</p>
+
                     </div>
                 </article>
             </section>

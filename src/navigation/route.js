@@ -20,6 +20,9 @@ import BeritaDetail from "../screens/Berita/BeritaDetail";
 import JadwalIndex from "../screens/Jadwal/JadwalIndex";
 import SejabarIndex from "../screens/Sejabar/SejabarIndex";
 import PoliUmumIndex from "../screens/Layanan/PoliUmum/PoliUmumIndex";
+import FisioterapiIndex from "../screens/Layanan/Fisioterapi/FisioterapiIndex";
+import LabolatoriumIndex from "../screens/Layanan/Labolatorium/LabolatoriumIndex";
+import FarmasiIndex from "../screens/Layanan/Farmasi/FarmasiIndex";
 
 const routesConfig = [
   {
@@ -128,6 +131,33 @@ const routesConfig = [
           <>
             <TopNavbar/>
             <PoliUmumIndex />
+            <Footer/>
+          </>
+      },
+      {
+        path: "fisioterapi",
+        element: 
+          <>
+            <TopNavbar/>
+            <FisioterapiIndex />
+            <Footer/>
+          </>
+      },
+      {
+        path: "labolatorium",
+        element: 
+          <>
+            <TopNavbar/>
+            <LabolatoriumIndex />
+            <Footer/>
+          </>
+      },
+      {
+        path: "farmasi",
+        element: 
+          <>
+            <TopNavbar/>
+            <FarmasiIndex />
             <Footer/>
           </>
       },
