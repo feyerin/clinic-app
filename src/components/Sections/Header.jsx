@@ -38,7 +38,7 @@ export default function Header() {
         slidesToSlide={1}
       >
         <section className="bg-center bg-gray-700 bg-blend-multiply" style={{backgroundImage: `url(${banner})`, width: "100%"}}>
-          <div className="px-4 mx-auto max-w-screen-2xl py-24 lg:py-56">
+          <div className="px-16 mx-auto max-w-screen-2xl py-24 lg:py-56">
               <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Klinik Prama Inggit garnasih</h1>
               <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl lg:pr-96"> fasilitas pelayanan kesehatan yang bersifat mandiri dalam menyelenggarakan pelayanan kesehatan perorangan bagi lansia</p>
               <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
