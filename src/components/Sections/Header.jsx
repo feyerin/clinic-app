@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import banner from "../../assets/img/banner.jpg";
+import banner2 from "../../assets/img/banner2.jpg";
 
 //carousel
 import Carousel from "react-multi-carousel";
@@ -27,9 +27,9 @@ export default function Header() {
 	};
 
   return (
-    <>
+    <div className="mt-24">
       <Carousel
-        autoPlay
+        autoPlay={false}
         arrows={false}
         autoPlaySpeed={6000}
         infinite
@@ -37,39 +37,36 @@ export default function Header() {
         showDots={false}
         slidesToSlide={1}
       >
-        <div>
-          <Wrapper>
-            <img loading="lazy" src={banner} alt="banner" />
-          </Wrapper>
-        </div>
-
-        {/* <div style={{backgroundImage: `url(https://dummyimage.com/960x600/b9bad4/fff)`, height:"100%", backgroundPosition:"center", backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
-          <Wrapper id="home" className="container flexSpaceCenter">
-            <LeftSide className="flexCenter">
-              <div>
-                <h1 className="extraBold font60">We are Digital Agency.</h1>
-                <HeaderP className="font13 semiBold">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                  voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                </HeaderP>
-                <BtnWrapper>
-                  <FullButton title="Get Started" />
-                </BtnWrapper>
+        <section className="bg-center bg-gray-700 bg-blend-multiply" style={{backgroundImage: `url(${banner})`, width: "100%"}}>
+          <div className="px-4 mx-auto max-w-screen-2xl py-24 lg:py-56">
+              <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Klinik Prama Inggit garnasih</h1>
+              <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl lg:pr-96"> fasilitas pelayanan kesehatan yang bersifat mandiri dalam menyelenggarakan pelayanan kesehatan perorangan bagi lansia</p>
+              <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+                  <a href="#" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary hover:bg-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                      Hubungi Kami
+                  </a>
+                  <a href="#" className="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                      Learn more
+                  </a>  
               </div>
-            </LeftSide>
-          </Wrapper>
-        </div> */}
+          </div>
+        </section>
+
+        <section className="bg-center bg-gray-700 bg-blend-multiply" style={{backgroundImage: `url(${banner2})`, width: "100%"}}>
+          <div className="px-4 mx-auto max-w-screen-2xl py-24 lg:py-56">
+              <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Klinik Prama Inggit garnasih</h1>
+              <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl lg:pr-96"> fasilitas pelayanan kesehatan yang bersifat mandiri dalam menyelenggarakan pelayanan kesehatan perorangan bagi lansia</p>
+              <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+                  <a href="#" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary hover:bg-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                      Hubungi Kami
+                  </a>
+                  <a href="#" className="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                      Learn more
+                  </a>  
+              </div>
+          </div>
+        </section>
       </Carousel>      
-    </>
+    </div>
   );
 }
-
-const Wrapper = styled.section`
-  width: 100%;
-  @media (max-width: 960px) {
-    margin-top: 60px;
-  }
-  @media (max-width: 426px) {
-    margin-top: 40px;
-  }
-`;

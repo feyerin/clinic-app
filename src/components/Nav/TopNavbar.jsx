@@ -46,7 +46,7 @@ export default function TopNavbar() {
 
   return (
     <>
-      <Wrapper className="flexCenter animate" style={y > 100 ? { height: "60px", background:"#fff", boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px" } : { height: "80px" }}>
+      <Wrapper className="flexCenter animate bg-white" style={y > 100 ? { height: "60px", background:"#fff", boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px" } : { height: "80px" }}>
         <nav className="lg:mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 " aria-label="Global">
           <div className="">
             <div className="flex">
