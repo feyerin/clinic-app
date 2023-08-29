@@ -6,7 +6,7 @@ export default function Contact() {
         <footer className="p-4 sm:p-6 bg-gray-700">
             <div className="md:flex md:justify-between">
                 <div className="mb-6 md:mb-0">
-                    <a href="https://flowbite.com/" className="flex items-center">
+                    <a href="/" className="flex items-center">
                         <img src={LogoIcon} className="h-16 mr-3" alt="FlowBite Logo" />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">INGGIT GARNASIH</span>
                     </a>
@@ -16,10 +16,10 @@ export default function Contact() {
                         <h2 className="mb-6 text-sm font-semibold uppercase text-white">Follow us</h2>
                         <ul className="text-gray-400">
                             <li className="mb-4">
-                                <a href="https://github.com/themesberg/flowbite" className="hover:underline text-white">Instagram</a>
+                                <a href="#" className="hover:underline text-white">Instagram</a>
                             </li>
                             <li>
-                                <a href="https://discord.gg/4eeurUVvTy" className="hover:underline text-white">Facebook</a>
+                                <a href="#" className="hover:underline text-white">Facebook</a>
                             </li>
                         </ul>
                     </div>
