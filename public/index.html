@@ -42,11 +42,6 @@
         height: 130px;
         animation: spin 2s linear infinite;
       }
-      
-      @keyframes spin {
-        0%  { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
 
       .loader-cont {
         display: flex;
@@ -66,7 +61,7 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
-    <div class="loader-container animate-pulse loader-cont">
+    <div class="loader-container animate-pulse animate-delay-500 animate-thrice loader-cont">
       <img src="%PUBLIC_URL%/logo-landscape.png" class="logo">
    </div>
     <!--
