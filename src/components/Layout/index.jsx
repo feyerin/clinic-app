@@ -3,8 +3,8 @@ import React from "react"
 export default function Layout({Content, Title}) {
   return (
     <>
-      <div className="bg-white">
-        <nav className=" mt-20 xl:pl-48 lg:pl-5 md:pl-4 sm:pl-5 py-3 text-gray-700 border border-gray-200 rounded-lg bg-gray-100">
+      <div className="bg-gray-50">
+        <nav className=" mt-32 xl:pl-48 lg:pl-5 md:pl-4 sm:pl-5 py-3 text-gray-700 border border-gray-200 rounded-lg bg-gray-100">
           <ol className="inline-flex items-center mb-3 space-x-1 md:space-x-3 sm:mb-0">
             <li>
               <div className="flex items-center">

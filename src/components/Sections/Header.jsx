@@ -38,8 +38,8 @@ export default function Header() {
         slidesToSlide={1}
       >
         <section className="bg-center bg-gray-700 bg-blend-multiply" style={{backgroundImage: `url(${banner})`, width: "100%"}}>
-          <div className="px-16 mx-auto max-w-screen-2xl py-24 lg:py-56 animate-fade-right animate-delay-500 animate-once">
-              <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Klinik Prama Inggit garnasih</h1>
+          <div className="px-4 lg:px-10 mx-auto max-w-screen-2xl py-24 lg:py-56 animate-fade-right animate-delay-500 animate-once">
+              <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Klinik Pratama Inggit garnasih</h1>
               <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl lg:pr-96"> fasilitas pelayanan kesehatan yang bersifat mandiri dalam menyelenggarakan pelayanan kesehatan perorangan bagi lansia</p>
               <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
                   <a href="#" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary hover:bg-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
@@ -53,8 +53,8 @@ export default function Header() {
         </section>
 
         <section className="bg-center bg-gray-700 bg-blend-multiply" style={{backgroundImage: `url(${banner2})`, width: "100%"}}>
-          <div className="px-4 mx-auto max-w-screen-2xl py-24 lg:py-56 animate-fade-right animate-delay-4500 animate-once">
-              <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Klinik Prama Inggit garnasih</h1>
+          <div className="px-4 lg:px-10 mx-auto max-w-screen-2xl py-24 lg:py-56 animate-fade-right animate-delay-4500 animate-once">
+              <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Klinik Pratama Inggit garnasih</h1>
               <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl lg:pr-96"> fasilitas pelayanan kesehatan yang bersifat mandiri dalam menyelenggarakan pelayanan kesehatan perorangan bagi lansia</p>
               <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
                   <a href="#" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary hover:bg-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">

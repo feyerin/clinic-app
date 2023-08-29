@@ -19,12 +19,9 @@ import BeritaIndex from "../screens/Berita/BeritaIndex";
 import BeritaDetail from "../screens/Berita/BeritaDetail";
 import JadwalIndex from "../screens/Jadwal/JadwalIndex";
 import SejabarIndex from "../screens/Sejabar/SejabarIndex";
+import PoliUmumIndex from "../screens/Layanan/PoliUmum/PoliUmumIndex";
 
 const routesConfig = [
-  {
-    path: "/login",
-    element: <Landing />,
-  },
   {
     path: "/admin/login",
     element: 
@@ -122,6 +119,15 @@ const routesConfig = [
           <>
             <TopNavbar/>
             <SejabarIndex />
+            <Footer/>
+          </>
+      },
+      {
+        path: "poli-umum",
+        element: 
+          <>
+            <TopNavbar/>
+            <PoliUmumIndex />
             <Footer/>
           </>
       },

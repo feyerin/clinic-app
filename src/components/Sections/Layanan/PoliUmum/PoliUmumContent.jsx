@@ -1,7 +1,19 @@
 import React from 'react';
-import alur from "../../../assets/img/alur.jpg";
+import fasilitas4 from "../../../../assets/img/fasilitas/4.jpg";
+import fasilitas5 from "../../../../assets/img/fasilitas/5.jpg";
 
-export default function SejabarContent() {
+// heroicons
+import { ChevronRightIcon } from '@heroicons/react/24/outline';
+
+const layanan = [
+    { name: 'Poli Umum', description: 'Pelayanan Medis Dasar Menyeluruh, Pengobatan dasar umum/farmasi, Penyuluhan/konseling/edukasi, Ramah Lansia', href: '/poli-umum' },
+    { name: 'Fisioterapi + Hidroterapi', description: '', href: '#' },
+    { name: 'Labolatorium', description: '', href: '#' },
+    { name: 'Instalasi Farmasi ', description: 'Pelayanan informasi obat, Konseling Obat, Home Pharmacy Care', href: '#'},
+  ]
+  
+
+export default function PoliUmumContent() {
     const url = window.location.href;
 
     return (
@@ -9,56 +21,64 @@ export default function SejabarContent() {
             <section className="w-full md:w-2/3 flex flex-col items-center px-3">
                 <article className="flex flex-col shadow my-4">
                     <div className="bg-white flex flex-col justify-start p-6">
-                        <span className="mb-2 text-4xl tracking-tight font-extrabold text-gray-900">SEJABAR “Sehat Jagjag Babarengan”</span>
-                        <div className="w-full bg-white h-1 mb-5">
+                        <span className="mb-2 text-4xl tracking-tight font-extrabold text-gray-900">Layanan Poli Umum</span>
+                        <div className="w-full h-1 mb-5">
                            <div className="bg-primary h-1" style={{width: "15%"}}></div>
                         </div>
                         <p className="text-[10px]">
-                            By <span className="font-semibold text-primary">Klinik Inggit Garnasih</span>, Published on 25 Agustus 2023
+                            By <span className="font-semibold text-primary">Klinik Inggit Garnasih</span>
                         </p>
                     </div>
-                    <div className="hover:opacity-75 pl-6 pr-6 pb-6">
-                        <img src={alur} className="rounded" crossOrigin="anonymous"/>
-                    </div>
-                    
+            
+                    <div className='p-6 bg-white'>
+                        <p className="text-gray-700">Poli umum merupakan tempat pelayanan yang bertugas melakukan pemeriksaan pasien secara umum  atau menyeluruh, dengan melihat indikasi atau gejala – gejala yang di derita oleh pasien. </p>
+                        
+                        <p className="text-gray-700 mt-9">Poli umum dilayani oleh Dokter Umum dan Perawat yang bertugas melakukan anamnesa dan diagnosa awal terhadap pasien, sehingga dapat memberikan pelayanan yang sesuai standar dan dapat di pertanggungjawabkan dalam mendiagnosa setiap keluhan pada pasien yang berkunjung dipoli umum. </p>
 
-                    <div className='p-6'>
-                        <p className=" text-gray-700">Kartu Sejabar adalah Kartu Sehat yang diperuntukkan bagi Pensiunan ASN Provinsi Jawa Barat yang telah 
-                        berkontribusi dalam pengelolaan Zakat di Badan Amil Zakat Nasional (BAZNAS) Provinsi Jawa Bara</p>
+                        <div className="grid grid-cols-2 gap-6 mt-7 pr-4">
+                            <div>
+                                <img src={fasilitas5} className="rounded h-56 animate-fade-right animate-once animate-delay-100 animate-ease-in" crossOrigin="anonymous"/>
+                            </div>
+                            <div>
+                                <img src={fasilitas4} className="rounded h-56 animate-fade-right animate-once animate-delay-100 animate-ease-in" crossOrigin="anonymous"/>
+                            </div>
+                        </div>
 
-                        <p className="mt-16 font-semibold text-gray-900">Pelayanan Kartu Sejabar :</p>
-                        <dl className=" grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-                            <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-black">1. Poli Umum </dt>
-                            <dd className="mt-2 text-sm text-gray-500">Poli Umum merupakan salah satu pelayanan kedokteran berupa pemeriksaan kesehatan, pengobatan dan penyuluhan kepada pasien agar tidak terjadi penularan dan komplikasi penyakit. </dd>
-                            </div>
-                            <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-900">2. Pemeriksaan Darah</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Pemeriksaan Gula darah, Asam urat dan Kolesterol. Pemeriksaan kimia darah untuk mengetahui kadar gula darah, asam urat dan kolesterol .</dd>
-                            </div>
-                            <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-900">3. Fisioterapi</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Fisioterapi adalah tindakan rehabilitasi untuk menghindari atau meminimalkan keterbatasan fisik akibat cedera atau penyakit. Tindakan fisioterapi bisa dilakukan dengan berbagai cara, baik itu penanganan secara manual maupun menggunakan alat.</dd>
-                            </div>
-                            <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-900">4. Hidroterapi</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Hidroterapi Merupakan metode fisioterapi yang bertujuan mengurangi nyeri, penguatan otot dengan menggunakan media air.</dd>
-                            </div>
-                            <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-900">5. Farmasi</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Obat yang diberikan kepada pasien untuk menunjang proses pengobatan dan penyembuhan pasien.</dd>
-                            </div>
-                            <div className="border-t border-gray-200 pt-4">
-                            <dt className="font-medium text-gray-900">6. Hipnoterapi</dt>
-                            <dd className="mt-2 text-sm text-gray-500">Hipnoterapi merupakan praktik yang bertujuan untuk membantu lebih dari puluhan permasalahan yang terjadi pada individu. menggunakan berbagai macam metode yang sangat efektif dalam membantu permasalahan pada seseorang, hypnoterapi bekerja dalam menghapus program-program negative yang bersarang pada otak manusia</dd>
-                            </div>
-                           
-                        </dl>
+                        <p className="text-gray-700 mt-9">Poli umum ini juga menangani pasien secara menyeluruh dari segala jenis umur dan dari semua kalangan, baik dari bayi, batita, balita, remaja, dewasa bahkan lanjut usia. </p>
+
+                        <p className="text-gray-700 mt-9">Poli umum, dapat menerima rujukan dari luar klinik, baik rujukan rawat jalan, rujukan fisioterapi/hidroterapi maupun rujukan laboratorium. </p>
+
+                       
                     </div>
                 </article>
             </section>
 
             <aside className="w-full md:w-1/3 flex flex-col items-center px-3">
+                <div className="w-full bg-white shadow flex flex-col my-4 p-6">
+                    <p className="text-sm font-semibold mb-2">Layanan Lainnya :</p>
+                    <div className="w-full bg-gray-200 h-1 mb-5">
+                      <div className="bg-primary h-1" style={{width: "20%"}}></div>
+                    </div>
+                    <ul role="list" className="divide-y divide-gray-100">
+                        {layanan.map((item) => (
+                            <>
+                                <li className="flex justify-between gap-x-6 py-5 hover:text-primary">
+                                    <div className="flex min-w-0 gap-x-4">
+                                        <div className="min-w-0 flex-auto">
+                                            <a href={item.href} className="text-sm font-semibold leading-6 text-gray-900 hover:text-primary">{item.name}</a>
+                                        </div>
+                                    </div>
+                                    <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                                        <ChevronRightIcon className="h-6 w-6"/>
+                                    </div>
+                                </li>
+                                <hr className="h-0.5 mx-auto bg-gray-200 border-0 rounded"/>
+                            </>
+                        ))}
+                    </ul>
+
+                </div> 
+
                 <div className="w-full bg-white shadow flex flex-col my-4 p-6">
                     <p className="text-sm font-semibold mb-2">Lokasi Layanan :</p>
                     <div className="w-full bg-gray-200 h-1 mb-5">
@@ -94,5 +114,6 @@ export default function SejabarContent() {
             </aside>
         </div>
     )
-  }
+}
+
   
