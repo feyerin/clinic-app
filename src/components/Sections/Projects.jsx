@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import FullButton from "../Buttons/FullButton";
-import AddImage2 from "../../assets/img/add/add2.png";
+import AddImage2 from "../../assets/img/fasilitas/8.jpg";
 
 export default function Projects() {
   return (
@@ -79,17 +79,19 @@ export default function Projects() {
         <div className="container">
           <Advertising className="flexSpaceCenter">
             <AddLeft>
-              <AddLeftInner>
-                <ImgWrapper className="flexCenter">
-                  <img className="radius8" src={AddImage2} alt="add" />
+                <ImgWrapper className="">
+                  <img className="radius8" src={AddImage2} alt="pelayanan"/>
                 </ImgWrapper>
-              </AddLeftInner>
             </AddLeft>
             <AddRight>
-              <h4 className="font15 semiBold">A few words about company</h4>
-              <h2 className="font40 extraBold">A Study of Creativity</h2>
-              <div className="">
-                    <p className="mb-9 text-gray-800 text-3xl leading-10">Team management mobile applications don’t get much better than Pavo. Download it today</p>
+              <h4 className="font15 semiBold">Klinik Pratama Inggit Garnasih</h4>
+              <h2 className="font40 extraBold">Jam Pelayanan Klinik</h2>
+              <div className="mb-9 ml-10">
+                  <ol className="text-xl text-gray-800 list-decimal leading-10">
+                      <li>Senin-Jumat	: 08.00-20.00 WIB</li>
+                      <li>Sabtu		: 08.00-16.00 WIB</li>
+                      <li>Minggu	: Libur</li>
+                  </ol>
                 </div>
               <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
                 <div style={{ width: "190px" }}>
@@ -152,24 +154,6 @@ const AddRight = styled.div`
   @media (max-width: 860px) {
     width: 80%;
     order: 2;
-  }
-`;
-const AddLeftInner = styled.div`
-  width: 100%;
-  position: absolute;
-  top: -300px;
-  left: 0;
-  @media (max-width: 1190px) {
-    top: -250px;
-  }
-  @media (max-width: 920px) {
-    top: -200px;
-  }
-  @media (max-width: 860px) {
-    order: 1;
-    position: relative;
-    top: -60px;
-    left: 0;
   }
 `;
 const ImgWrapper = styled.div`

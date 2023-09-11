@@ -23,7 +23,7 @@ import LogoIcon from "../../assets/img/logo-clinic.png";
 const services = [
   { name: 'Poli Umum', description: 'Pelayanan Medis Dasar Menyeluruh, Pengobatan dasar umum/farmasi, Penyuluhan/konseling/edukasi, Ramah Lansia', href: '/poli-umum', icon: ChartPieIcon },
   { name: 'Fisioterapi + Hidroterapi', description: '', href: '/fisioterapi', icon: BuildingLibraryIcon },
-  { name: 'Labolatorium', description: '', href: '/labolatorium', icon: FingerPrintIcon },
+  { name: 'Laboratorium ', description: '', href: '/laboratorium ', icon: FingerPrintIcon },
   { name: 'Instalasi Farmasi ', description: 'Pelayanan informasi obat, Konseling Obat, Home Pharmacy Care', href: '/farmasi', icon: SquaresPlusIcon },
 ]
 
@@ -236,7 +236,7 @@ export default function TopNavbar() {
                               <p className="text-base leading-4  ">Fisioterapi + Hidroterapi</p>
                           </a>
                           <hr className="h-0.5 mx-auto bg-gray-200 border-0 rounded"/>
-                          <a href='/labolatorium' className="flex justify-start items-center space-x-6 hover:text-primary text-gray-700 rounded px-3 py-2 w-full">
+                          <a href='/laboratorium ' className="flex justify-start items-center space-x-6 hover:text-primary text-gray-700 rounded px-3 py-2 w-full">
                               <p className="text-base leading-4  ">Laboratorium </p>
                           </a>
                           <hr className="h-0.5 mx-auto bg-gray-200 border-0 rounded"/>

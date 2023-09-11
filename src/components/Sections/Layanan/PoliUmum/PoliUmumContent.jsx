@@ -8,7 +8,7 @@ import { ChevronRightIcon } from '@heroicons/react/24/outline';
 const layanan = [
     { name: 'Poli Umum', description: 'Pelayanan Medis Dasar Menyeluruh, Pengobatan dasar umum/farmasi, Penyuluhan/konseling/edukasi, Ramah Lansia', href: '/poli-umum' },
     { name: 'Fisioterapi + Hidroterapi', description: '', href: '/fisioterapi' },
-    { name: 'Labolatorium', description: '', href: '/labolatorium' },
+    { name: 'Laboratorium ', description: '', href: '/laboratorium ' },
     { name: 'Instalasi Farmasi ', description: 'Pelayanan informasi obat, Konseling Obat, Home Pharmacy Care', href: '/farmasi'},
 ]
   

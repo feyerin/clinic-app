@@ -21,7 +21,7 @@ import JadwalIndex from "../screens/Jadwal/JadwalIndex";
 import SejabarIndex from "../screens/Sejabar/SejabarIndex";
 import PoliUmumIndex from "../screens/Layanan/PoliUmum/PoliUmumIndex";
 import FisioterapiIndex from "../screens/Layanan/Fisioterapi/FisioterapiIndex";
-import LabolatoriumIndex from "../screens/Layanan/Labolatorium/LabolatoriumIndex";
+import LaboratoriumIndex from "../screens/Layanan/Laboratorium/LaboratoriumIndex";
 import FarmasiIndex from "../screens/Layanan/Farmasi/FarmasiIndex";
 
 const routesConfig = [
@@ -144,11 +144,11 @@ const routesConfig = [
           </>
       },
       {
-        path: "labolatorium",
+        path: "laboratorium",
         element: 
           <>
             <TopNavbar/>
-            <LabolatoriumIndex />
+            <LaboratoriumIndex />
             <Footer/>
           </>
       },

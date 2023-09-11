@@ -7,7 +7,9 @@ import fasilitas1 from "../../assets/img/fasilitas/1.jpg";
 import fasilitas5 from "../../assets/img/fasilitas/5.jpg";
 import fasilitas3 from "../../assets/img/fasilitas/3.jpg";
 import fasilitas4 from "../../assets/img/fasilitas/4.jpg";
-import baznas from "../../assets/img/clients/baznas.png";
+import banner2 from "../../assets/img/banner2.jpg";
+import baznas from "../../assets/img/clients/baznas2.png";
+import stik from "../../assets/img/clients/STIK.png";
 import bjb from "../../assets/img/clients/bank-bjb.png";
 
 import { ChevronRightIcon } from '@heroicons/react/24/outline'
@@ -22,9 +24,10 @@ export default function Services() {
         <div className="bg-white py-12">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">Trusted by the world’s most innovative teams</h2>
-            <div className="mx-auto mt-10 grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-4 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-              <img className="col-span-2 max-h-24 w-full object-contain lg:col-span-1" src={baznas} alt="Transistor" width={258} height={148}/>
-              <img className="col-span-2 max-h-24 w-full object-contain lg:col-span-1" src={bjb} alt="Reform" width={258} height={348}/>
+            <div className="mx-auto mt-10 grid max-w-lg grid-cols-3 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+              <img className="col-span-1 max-h-24 w-full object-contain lg:col-span-1" src={baznas} alt="Transistor" width={258} height={148}/>
+              <img className="col-span-1 max-h-24 w-full object-contain lg:col-span-1" src={bjb} alt="Reform" width={258} height={348}/>
+              <img className="col-span-1 max-h-24 w-full object-contain lg:col-span-1" src={stik} alt="Reform" width={258} height={348}/>
             </div>
           </div>
         </div>
@@ -33,17 +36,19 @@ export default function Services() {
           <div className="container">
             <Advertising className="flexSpaceCenter">
               <AddLeft>
-                <h2 className="text-lg font-semibold text-primary">Tentang Klinik </h2>
-                <h1 className="extraBold text-[36px] tracking-wide">Pratama Inggit Garnasih</h1>
+                <h2 className="text-lg font-semibold text-primary">Tentang Kami </h2>
+                <h1 className="extraBold text-[36px] tracking-wide">Klinik Pratama Inggit Garnasih</h1>
                 <p className="font15 font-Inter leading-loose	mt-5 font-semibold text-gray-500">
                   <span className="text-primary">Klinik pratama inggit garnasih </span> merupakan inisiasi dari Badan Amil Zakat Nasional Provinsi Jawa Barat (disingkat Baznas Jabar) yang diamanahi oleh Gubernur Jawa Barat sekaligus amanat dari Ibu Inggit Garnasih untuk memuliakan para lansia (Program Nyaah Ka Kolot).
                 </p>
-                <div className="mt-10" style={{ width: "190px" }}>
-                  <button className="text-primary flex rounded-full border-solid border-2 border-primary p-4">Selengkapnya <ChevronRightIcon className="h-6 w-6"/></button>
-                </div>
+                <a href="/profil">
+                  <div className="mt-10" style={{ width: "190px" }}>
+                    <button className="text-primary flex rounded-full border-solid border-2 border-primary p-4">Selengkapnya <ChevronRightIcon className="h-6 w-6"/></button>
+                  </div>
+                </a>
               </AddLeft>
               <AddRight>
-                <img className="radius8" src={fasilitas4} width={2000} height={600} alt="add" />
+                <img className="radius8" src={banner2} width={2000} height={800} alt="add" />
               </AddRight>
             </Advertising>
           </div>
@@ -63,35 +68,34 @@ export default function Services() {
             <ServiceBoxWrapper>
               <ServiceBox
                 image={fasilitas1}
-                title="Graphic Design"
-                subtitle="Lorem ipsum dolor sit amet"
+                title="Fisioterapi (Alat dan Modalitas)"
+                subtitle=""
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
                 image={fasilitas5}
-                title="Web Design"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+                title="Poli Umum"
+                subtitle=""
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
                 image={fasilitas3}
-                title="Development"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+                title="Hidroterapi"
+                subtitle=""
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox 
                 image={fasilitas4}
-                title="Print" 
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
+                title="Fisioterapi (Gym dan Latihan)" 
+                subtitle="" />
             </ServiceBoxWrapper>
           </ServiceBoxRow>
-
-          <div style={{ width: "190px" }}>
-            <button className="text-primary flex rounded-full border-solid border-2 border-primary p-4">Selengkapnya <ChevronRightIcon className="h-6 w-6"/></button>
-          </div>
+            {/* <div style={{ width: "190px" }}>
+              <button className="text-primary flex rounded-full border-solid border-2 border-primary p-4">Selengkapnya <ChevronRightIcon className="h-6 w-6"/></button>
+            </div> */}
         </section>
       </div>
     </Wrapper>

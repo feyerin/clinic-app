@@ -1,12 +1,13 @@
 import React from 'react';
 import alur from "../../../assets/img/alur.jpg";
+import step from "../../../assets/img/step.jpg";
 
 export default function SejabarContent() {
     const url = window.location.href;
 
     return (
         <div className="container mx-auto flex flex-wrap py-6 mb-6">
-            <section className="w-full md:w-2/3 flex flex-col items-center px-3">
+            <section className="w-full md:w-2/3 flex flex-col items-center px-5">
                 <article className="flex flex-col shadow my-4">
                     <div className="bg-white flex flex-col justify-start p-6">
                         <span className="mb-2 text-4xl tracking-tight font-extrabold text-gray-900">SEJABAR “Sehat Jagjag Babarengan”</span>
@@ -54,6 +55,17 @@ export default function SejabarContent() {
                             </div>
                            
                         </dl>
+
+                        <div className="hover:opacity-75 pl-6 pr-6 mt-16">
+                            <img src={step} className="rounded" crossOrigin="anonymous"/>
+                        </div>
+
+                        <p className="mt-8 font-semibold text-gray-900">Batasan penerima manfaat :</p>
+                        <ol className="text-sm text-gray-500 list-decimal ml-3">
+                            <li>Penerima kartu Sejabar adalah pensiunan ASN yang telah berzakat secara rutin kepada BAZNAS jawa Barat minimal 2 tahun</li>
+                            <li>Pengguna Kartu Sejabar adalah suami dan/atau istri dalam satu Kartu Keluarga (KK), Kartu keluarga (KK) dibawa pada saat melakukan pemeriksaan </li>
+                            <li>Kartu sehat tidak bisa dipindah tangankan kecuali jika pemilik kartu sehat meninggal dunia, dapat dipindah tangankan kepada suami dan/atau istri (selama tidak menikah kembali) </li>
+                        </ol>
                     </div>
                 </article>
             </section>
