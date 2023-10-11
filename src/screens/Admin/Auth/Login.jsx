@@ -2,7 +2,7 @@ import axios from 'axios';
 import { React, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from "react-toastify";
-
+import logo from "../../../assets/img/logo klinik IG_landscape.png"
 
 export default function Login() {
     const navigate = useNavigate();
@@ -25,9 +25,9 @@ export default function Login() {
                 username: formAuthLogin.username,
                 password: formAuthLogin.password
             });
-            localStorage.setItem("isAuthenticated", true);
-            toast.success(`Login Berhasil`)
-            
+            localStorage.setItem("isAuthenticated", "true");
+            toast.success(`Login Berhasil`);
+            navigate("/admin");
           } catch (error) {
             console.log(error);
             toast.error(`${error.response.data.message}`)
@@ -36,18 +36,17 @@ export default function Login() {
 
     useEffect(() => {
 		const login = localStorage.getItem("isAuthenticated");
-		login === true && navigate("/admin");
+        if (login === "true") {
+            navigate("/admin");
+        }
 	}, []);
   
   return (
     <div className="bg-no-repeat bg-cover bg-center relative"><div className="absolute bg-gradient-to-b from-indigo-500 to-blue-400 opacity-75 inset-0 z-0"></div>
         <div className="min-h-screen sm:flex sm:flex-row mx-0 justify-center">
             <div className="flex-col flex  self-center p-10 sm:max-w-5xl xl:max-w-2xl  z-10">
-            <div className="self-start hidden lg:flex flex-col ">
-                <img src="" className="mb-3" alt='thumbnail'/>
-                <h1 className="mb-3 font-bold text-5xl">Hi ? Welcome Back </h1>
-                <p className="pr-3">Lorem ipsum is placeholder text commonly used in the graphic, print,
-                and publishing industries for previewing layouts and visual mockups</p>
+            <div className="self-start hidden lg:flex flex-col">
+                <img src={logo} className="mb-3" alt='thumbnail'/>
             </div>
             </div>
             <div className="flex justify-center self-center  z-10">

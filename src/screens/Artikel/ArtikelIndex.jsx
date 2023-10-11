@@ -5,7 +5,10 @@ import ArtikelIndexContent from "../../components/Sections/Artikel/ArtikelIndexC
 export default function ArtikelIndex() {
   return (
     <>
-      <Layout Content={<ArtikelIndexContent/>}/>
+      <Layout 
+        Content={<ArtikelIndexContent/>}
+        Title={"Artikel Kesehatan"}
+      />
     </>
 
   )

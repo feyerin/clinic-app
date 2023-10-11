@@ -5,7 +5,10 @@ import ArtikelContent from "../../components/Sections/Artikel/ArtikelContent";
 export default function ArtikelDetail() {
   return (
     <>
-      <Layout Content={<ArtikelContent/>}/>
+      <Layout 
+        Content={<ArtikelContent/>}
+        Title={"Artikel Kesehatan"}
+      />
     </>
   )
 }

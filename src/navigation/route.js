@@ -23,6 +23,7 @@ import PoliUmumIndex from "../screens/Layanan/PoliUmum/PoliUmumIndex";
 import FisioterapiIndex from "../screens/Layanan/Fisioterapi/FisioterapiIndex";
 import LaboratoriumIndex from "../screens/Layanan/Laboratorium/LaboratoriumIndex";
 import FarmasiIndex from "../screens/Layanan/Farmasi/FarmasiIndex";
+import BeritaEdit from "../screens/Admin/Berita/BeritaEdit";
 
 const routesConfig = [
   {
@@ -72,15 +73,6 @@ const routesConfig = [
           </>
       },
       {
-        path: "berita-content-preview",
-        element: 
-          <>
-            <TopNavbar/>
-            <BeritaDetail />
-            <Footer/>
-          </>
-      },
-      {
         path: "berita-content/",
         element: 
           <>
@@ -95,15 +87,6 @@ const routesConfig = [
           <>
             <TopNavbar/>
             <ArtikelIndex />
-            <Footer/>
-          </>
-      },
-      {
-        path: "artikel-content-preview",
-        element: 
-          <>
-            <TopNavbar/>
-            <ArtikelDetail />
             <Footer/>
           </>
       },
@@ -179,6 +162,13 @@ const routesConfig = [
         element: 
           <>
             <NewsTable/>
+          </>
+      },
+      {
+        path: "berita/edit",
+        element: 
+          <>
+            <BeritaEdit/>
           </>
       },
       {

@@ -131,11 +131,7 @@ export default function TopNavbar() {
                 Jadwal Dokter
               </a>
             </Link> */}
-            {/* <Link to={"/artikel"}>
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                Artikel Kesehatan
-              </a>
-            </Link>
+            {/*
             <Popover className="relative">
               <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
                 Berita & Aktivitas
@@ -171,6 +167,12 @@ export default function TopNavbar() {
                 </Popover.Panel>
               </Transition>
             </Popover>     */}
+            <a href="/artikel" className="text-sm font-semibold leading-6 text-gray-900">
+              Artikel Kesehatan
+            </a>
+            <a href="/berita" className="text-sm font-semibold leading-6 text-gray-900">
+              Berita & Aktivitas
+            </a>
             <a href="/sejabar" className="text-sm font-semibold leading-6 text-gray-900">
               Sejabar
             </a>

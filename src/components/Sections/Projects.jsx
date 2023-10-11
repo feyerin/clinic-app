@@ -94,11 +94,10 @@ export default function Projects() {
                   </ol>
                 </div>
               <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
-                <div style={{ width: "190px" }}>
-                  <FullButton title="Get Started" action={() => alert("clicked")} />
-                </div>
                 <div style={{ width: "190px", marginLeft: "15px" }}>
-                  <FullButton title="Contact Us" action={() => alert("clicked")} border />
+                  <a href={`https://wa.me/628112440606`}>
+                    <FullButton title="Contact Us" border />
+                  </a>
                 </div>
               </ButtonsRow>
             </AddRight>
