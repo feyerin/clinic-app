@@ -27,7 +27,7 @@ export default function Login() {
             });
             localStorage.setItem("isAuthenticated", "true");
             toast.success(`Login Berhasil`);
-            navigate("/admin");
+            navigate("/admin/berita");
           } catch (error) {
             console.log(error);
             toast.error(`${error.response.data.message}`)
@@ -37,7 +37,7 @@ export default function Login() {
     useEffect(() => {
 		const login = localStorage.getItem("isAuthenticated");
         if (login === "true") {
-            navigate("/admin");
+            navigate("/admin/berita");
         }
 	}, []);
   

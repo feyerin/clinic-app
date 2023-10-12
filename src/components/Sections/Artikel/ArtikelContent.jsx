@@ -46,13 +46,13 @@ export default function ArtikelContent() {
     return (
         <div className="container mx-auto flex flex-wrap py-6">
             <section className="w-full md:w-2/3 flex flex-col items-center px-3">
-                <article className="flex flex-col shadow my-4">
+            <article className="flex flex-col shadow my-4">
                     <div className="hover:opacity-75">
                         <img src={ `${process.env.REACT_APP_BASE_URL}/api/image/${data.article_image}`} className="rounded" crossOrigin="anonymous"/>
                     </div>
                     <div className="bg-white flex flex-col justify-start p-6">
-                        <span href="#" className="text-3xl font-bold hover:text-gray-700 pb-4">{ data.article_title}</span>
-                        <p className="text-sm pb-3 ">
+                        <span href="#" className="md:text-3xl text-md font-bold md:pb-2 pb-1">{ data.article_title}</span>
+                        <p className="lg:pb-6 text-[10px] pb-5">
                             By <span href="#" className="font-semibold text-primary">{"Admin"}</span>, Published on <Moment format="DD MMMM YYYY">{data.created_at}</Moment>
                         </p>
                         <div className="text-gray-800 font-sans" dangerouslySetInnerHTML={{ __html: data.article_content }}></div>

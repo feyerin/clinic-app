@@ -27,7 +27,7 @@ import BeritaEdit from "../screens/Admin/Berita/BeritaEdit";
 
 const routesConfig = [
   {
-    path: "/admin/login",
+    path: "/login",
     element: 
       <>
         <Login/>

@@ -34,8 +34,8 @@ export default function BeritaIndexContent() {
     
   return (
     <div className="">
-        <div className="px-20 mx-auto flex flex-wrap py-6 mb-6">
-            <section className="w-full md:w-3/4 flex flex-col my-4">
+        <div className="lg:px-20 mx-auto flex flex-wrap py-6 mb-6">
+            <section className="w-full lg:w-3/4 md:w-[65%] sm:w-full flex flex-col my-4">
                 <div className="bg-white py-12 shadow-md">
                     <div className="mx-auto max-w-7xl px-6 lg:px-8">
                         <div className="mx-auto max-w-2xl lg:mx-0">
@@ -44,7 +44,7 @@ export default function BeritaIndexContent() {
                                 <div className="bg-primary h-1" style={{width: "20%"}}></div>
                             </div>
                         </div>
-                        <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 border-t border-gray-200 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                        <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 border-t border-gray-200 lg:mx-0 lg:max-w-none lg:grid-cols-3 md:grid-cols-2">
                             {data.map((post, index) => (
                                 <a href={`berita-content?id=${post.id}`} key={index} className="flex flex-col justify-between shadow-xl hover:shadow-2xl rounded-md ">
                                     <div className="pb-4">
@@ -88,7 +88,7 @@ export default function BeritaIndexContent() {
                 </div>
             </section>
 
-            <aside className="w-full md:w-1/4 flex flex-col items-center px-3">
+            <aside className="w-full lg:w-1/4 md:w-1/3 flex flex-col items-center px-3">
                 <div className="w-full bg-white shadow flex flex-col my-4 p-6">
                     <p className="text-sm font-semibold mb-2">Berita Terbaru :</p>
                     <div className="w-full bg-gray-200 h-1 mb-5">

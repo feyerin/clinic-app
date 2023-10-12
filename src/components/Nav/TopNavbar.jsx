@@ -228,7 +228,6 @@ export default function TopNavbar() {
                         </span>
                       </a>
                       <hr className="h-0.5 mx-auto bg-gray-200 border-0 rounded"/>
-
                       <div id="menu1" className={`${menu[0] ? 'flex' : 'hidden'} justify-start flex-col w-full md:w-auto items-start pb-1`}>
                           <a href='/poli-umum' className="flex justify-start items-center space-x-6 hover:text-primary text-gray-700 rounded px-3 py-2 w-full">
                               <p className="text-base leading-4  ">Poli Umum</p>
@@ -249,8 +248,6 @@ export default function TopNavbar() {
                       </div>
                       <hr className={`${menu[0] ? 'flex' : 'hidden'} h-0.5 mx-auto bg-gray-200 border-0 rounded`}/>
                   </div>
-
-
                   {/* <Disclosure as="div" className="-mx-3">
                     {({ open }) => (
                       <>
@@ -272,27 +269,28 @@ export default function TopNavbar() {
                       Jadwal Dokter
                     </a>
                   </Link>
-                  <Link to={"/artikel"}>
+                   */}
                     <a
-                      href="#"
+                      href="/artikel"
                       className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       Artikel Kesehatan
                     </a>
-                  </Link>
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Berita & Aktivitas
-                  </a> */}
-                  <a
-                    onClick={() => setMobileMenuOpen(false)}
-                    href="/sejabar"
-                    className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Sejabar
-                  </a>
+                    <hr className="h-0.5 mx-auto bg-gray-200 border-0 rounded"/>
+                    <a
+                      href="/berita"
+                      className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      Berita & Aktivitas
+                    </a>
+                    <hr className="h-0.5 mx-auto bg-gray-200 border-0 rounded"/>
+                    <a
+                      onClick={() => setMobileMenuOpen(false)}
+                      href="/sejabar"
+                      className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      Sejabar
+                    </a>
                 </div>
               </div>
             </div>

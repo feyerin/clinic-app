@@ -51,8 +51,8 @@ export default function BeritaContent() {
                         <img src={ `${process.env.REACT_APP_BASE_URL}/api/image/${data.news_image}`} className="rounded" crossOrigin="anonymous"/>
                     </div>
                     <div className="bg-white flex flex-col justify-start p-6">
-                        <span href="#" className="text-3xl font-bold hover:text-gray-700 pb-4">{ data.news_title}</span>
-                        <p className="text-sm pb-3 ">
+                        <span href="#" className="md:text-3xl text-md font-bold md:pb-2 pb-1">{ data.news_title}</span>
+                        <p className="lg:pb-6 text-[10px] pb-5">
                             By <span href="#" className="font-semibold text-primary">{"Admin"}</span>, Published on <Moment format="DD MMMM YYYY">{data.created_at}</Moment>
                         </p>
                         <div className="text-gray-800 font-sans" dangerouslySetInnerHTML={{ __html: data.news_content }}></div>

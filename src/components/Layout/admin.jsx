@@ -29,7 +29,7 @@ export default function AdminLayout() {
             });
             localStorage.clear();
             toast.success(`Logout Berhasil`);
-            navigate("/admin/login");
+            navigate("/login");
           } catch (error) {
             console.log(error);
             toast.error(`${error.response.data.message}`)
@@ -39,7 +39,7 @@ export default function AdminLayout() {
     useEffect(() => {
 		const login = localStorage.getItem("isAuthenticated");
         if (login !== "true") {
-            navigate("/admin/login");
+            navigate("/login");
         }
 	}, []);
 

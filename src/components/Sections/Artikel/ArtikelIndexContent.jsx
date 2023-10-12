@@ -34,8 +34,8 @@ export default function ArtikelIndexContent() {
     
   return (
     <div className="">
-        <div className="px-20 mx-auto flex flex-wrap py-6 mb-6">
-            <section className="w-full md:w-3/4 flex flex-col my-4">
+        <div className="lg:px-20 mx-auto flex flex-wrap py-6 mb-6">
+            <section className="w-full lg:w-3/4 md:w-[65%] sm:w-full flex flex-col my-4">
                 <div className="bg-white py-12 shadow-md">
                     <div className="mx-auto max-w-7xl px-6 lg:px-8">
                         <div className="mx-auto max-w-2xl lg:mx-0">
@@ -88,7 +88,7 @@ export default function ArtikelIndexContent() {
                 </div>
             </section>
 
-            <aside className="w-full md:w-1/4 flex flex-col items-center px-3">
+            <aside className="w-full lg:w-1/4 md:w-1/3 flex flex-col items-center px-3">
                 <div className="w-full bg-white shadow flex flex-col my-4 p-6">
                     <p className="text-sm font-semibold mb-2">Artikel Terbaru :</p>
                     <div className="w-full bg-gray-200 h-1 mb-5">
