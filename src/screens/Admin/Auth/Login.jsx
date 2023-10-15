@@ -25,7 +25,7 @@ export default function Login() {
                 username: formAuthLogin.username,
                 password: formAuthLogin.password
             });
-            localStorage.setItem("isAuthenticated", "true");
+            sessionStorage.setItem("isAuthenticated", "true");
             toast.success(`Login Berhasil`);
             navigate("/admin/berita");
           } catch (error) {
@@ -35,7 +35,7 @@ export default function Login() {
     }  
 
     useEffect(() => {
-		const login = localStorage.getItem("isAuthenticated");
+		const login = sessionStorage.getItem("isAuthenticated");
         if (login === "true") {
             navigate("/admin/berita");
         }

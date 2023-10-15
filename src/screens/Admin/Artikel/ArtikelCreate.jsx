@@ -12,8 +12,6 @@ export default function ArtikelCreate() {
     const [value, setValue] = useState("");
     const [image, setImage] = useState();
     const [obj, setObj] = useState({
-        date: "",
-        writer: "",
         thumbnail: "",
         title: "",
         content: ""
@@ -28,11 +26,16 @@ export default function ArtikelCreate() {
 
     const handleFileRead = async (event) => {
         const file = event.target.files[0]
-        setImage(file);
-        setObj({
-            ...obj,
-            [event.target.name]: file,
-        })
+            
+        if (file.size > 1 * 1000 * 1024) {
+            toast.error("Image with maximum size of 2MB is allowed");
+        } else {
+            setImage(file);
+            setObj({
+                ...obj,
+                [event.target.name]: file,
+            })
+        }
     }
   
     const imageHandler = () => {
@@ -97,7 +100,7 @@ export default function ArtikelCreate() {
             method: "post",
             url: `${process.env.REACT_APP_BASE_URL}/api/admin/article/create`,
             data: formData,
-            auth: {username: 'test', password: 'test'},
+            auth: {username: 'admin', password: 'adminklinik2023'},
             headers: { "Content-Type": "multipart/form-data" },
             })
             .then(() => {

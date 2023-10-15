@@ -18,9 +18,7 @@ import { ChevronRightIcon } from '@heroicons/react/24/outline'
 export default function Services() {
   return (
     <Wrapper id="services">
-
       <div>
-
         <div className="bg-white py-12">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">Trusted by the world’s most innovative teams</h2>

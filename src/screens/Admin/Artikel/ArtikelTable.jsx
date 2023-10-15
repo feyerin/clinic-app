@@ -39,8 +39,8 @@ export default function ArtikelTable() {
         try {
             const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/admin/article/all`, {
                 auth: {
-                    username: 'test',
-                    password: 'test'
+                    username: 'admin',
+                    password: 'adminklinik2023'
                 }
             });
           setData(res.data.data)
@@ -53,8 +53,8 @@ export default function ArtikelTable() {
         try {
             await axios.delete(`${process.env.REACT_APP_BASE_URL}/api/admin/article/delete/${id}`, {
                 auth: {
-                    username: 'test',
-                    password: 'test'
+                    username: 'admin',
+                    password: 'adminklinik2023'
                 }
             });
         toast.success("Artikel Berhasil Dihapus!");

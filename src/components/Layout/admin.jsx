@@ -23,11 +23,11 @@ export default function AdminLayout() {
             },
             {
                 auth: {
-                    username: 'test',
-                    password: 'test'
+                    username: 'admin',
+                    password: 'adminklinik2023'
                 }
             });
-            localStorage.clear();
+            sessionStorage.clear();
             toast.success(`Logout Berhasil`);
             navigate("/login");
           } catch (error) {
@@ -37,7 +37,7 @@ export default function AdminLayout() {
     }  
 
     useEffect(() => {
-		const login = localStorage.getItem("isAuthenticated");
+		const login = sessionStorage.getItem("isAuthenticated");
         if (login !== "true") {
             navigate("/login");
         }

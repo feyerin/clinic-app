@@ -30,11 +30,16 @@ export default function BeritaEdit() {
 
     const handleFileRead = async (event) => {
         const file = event.target.files[0]
-        setImage(file);
-        setObj({
-            ...obj,
-            [event.target.name]: file,
-        })
+            
+        if (file.size > 1 * 1000 * 1024) {
+            toast.error("Image with maximum size of 2MB is allowed");
+        } else {
+            setImage(file);
+            setObj({
+                ...obj,
+                [event.target.name]: file,
+            })
+        }
     }
   
     const imageHandler = () => {
@@ -82,8 +87,8 @@ export default function BeritaEdit() {
         try {
             const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/admin/news/detail/${searchParams.get('id')}`, {
                 auth: {
-                    username: 'test',
-                    password: 'test'
+                    username: 'admin',
+                    password: 'adminklinik2023'
                 }
             });
             const obj = {
@@ -119,7 +124,7 @@ export default function BeritaEdit() {
             method: "put",
             url: `${process.env.REACT_APP_BASE_URL}/api/admin/news/update/${searchParams.get('id')}`,
             data: formData,
-            auth: {username: 'test', password: 'test'},
+            auth: {username: 'admin', password: 'adminklinik2023'},
             headers: { "Content-Type": "multipart/form-data" },
             })
             .then(() => {

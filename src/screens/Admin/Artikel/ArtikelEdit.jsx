@@ -14,8 +14,6 @@ export default function ArtikelEdit() {
     const [image, setImage] = useState("");
     const [thumbnail, setThumbnail] = useState("");
     const [obj, setObj] = useState({
-        date: "",
-        writer: "",
         thumbnail: "",
         title: "",
         content: ""
@@ -30,11 +28,16 @@ export default function ArtikelEdit() {
 
     const handleFileRead = async (event) => {
         const file = event.target.files[0]
-        setImage(file);
-        setObj({
-            ...obj,
-            [event.target.name]: file,
-        })
+            
+        if (file.size > 1 * 1000 * 1024) {
+            toast.error("Image with maximum size of 2MB is allowed");
+        } else {
+            setImage(file);
+            setObj({
+                ...obj,
+                [event.target.name]: file,
+            })
+        }
     }
   
     const imageHandler = () => {
@@ -82,8 +85,8 @@ export default function ArtikelEdit() {
         try {
             const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/admin/article/detail/${searchParams.get('id')}`, {
                 auth: {
-                    username: 'test',
-                    password: 'test'
+                    username: 'admin',
+                    password: 'adminklinik2023'
                 }
             });
             const obj = {
@@ -119,7 +122,7 @@ export default function ArtikelEdit() {
             method: "put",
             url: `${process.env.REACT_APP_BASE_URL}/api/admin/article/update/${searchParams.get('id')}`,
             data: formData,
-            auth: {username: 'test', password: 'test'},
+            auth: {username: 'admin', password: 'adminklinik2023'},
             headers: { "Content-Type": "multipart/form-data" },
             })
             .then(() => {
@@ -134,11 +137,11 @@ export default function ArtikelEdit() {
     
     }
     
-    const onClickPreview = (url) => {
-        localStorage.setItem('artikelPreviewData', JSON.stringify(obj));
-        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-        if (newWindow) newWindow.opener = null
-    }
+    // const onClickPreview = (url) => {
+    //     localStorage.setItem('artikelPreviewData', JSON.stringify(obj));
+    //     const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+    //     if (newWindow) newWindow.opener = null
+    // }
 
     useEffect(() => {
         setObj({
@@ -226,13 +229,13 @@ export default function ArtikelEdit() {
                         </div>
                     </div>
                     <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
-                        <button
+                        {/* <button
                             onClick={() => onClickPreview("/artikel-content-preview")}
                             type="button"
                             className="inline-flex justify-center rounded-md bg-green-600 py-2 px-3 mr-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
                             >
                             Preview
-                        </button>
+                        </button> */}
                         <button
                             type="submit"
                             className="inline-flex justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
