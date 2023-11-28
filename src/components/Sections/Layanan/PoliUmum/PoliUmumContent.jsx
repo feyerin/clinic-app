@@ -1,5 +1,5 @@
 import React from 'react';
-import fasilitas4 from "../../../../assets/img/fasilitas/4.jpg";
+import fasilitas4 from "../../../../assets/img/Abah.jpg";
 import fasilitas5 from "../../../../assets/img/fasilitas/5.jpg";
 
 // heroicons

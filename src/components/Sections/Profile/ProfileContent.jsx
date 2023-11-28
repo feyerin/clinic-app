@@ -15,8 +15,8 @@ export default function ProfileContent() {
             <div className=" lg:grid lg:grid-cols-2 gap-16 ">
               <div className="text-gray-500 sm:text-md">
                   <h2 className="mb-10 text-4xl tracking-tight font-extrabold text-gray-900">Tentang Kami</h2>
-                  <p className="mb-10 text-gray-500">Klinik Pratama Inggit Garnasih ramah lansia adalah Klinik Pratama yang didirikan sebagai komitmen Pemerintah jawa barat terhadap keluarga Inggit Garnasih. Klinik pratama inggit garnasih juga didirikan atas inisiasi gubernur jabar Bpk Dr. H. Mochamad Ridwan Kamil S.T., M.U.D., Bersama Badan Amil Zakat (Baznas) Jawa Barat dan Bank bjb dalam mewujudkan program nyaah ka kolot (PNKK) sekaligus Amanah ibu inggit garnasih yang semasa hidupnya ingin mendirikan klinik untuk memuliaakan para lansia.</p>
-                  <p className="mt-10 text-gray-500">Klinik Pratama Inggit Garnasih ramah lansia berlokasi di jalan Flores no 6 kota Bandung. Adapun fasilitas yang dimiliki adalah Layanan Poli Umum, Layanan Fisioterapi dan Hidroterapi, Instalasi Farmasi, Laboratorium, Cafe Sehat, Ruang Hobby serta fasilitas dan tentunya Layanan Fisioterapi dan Hidroterapi sebagai layanan unggulan.</p>
+                  <p className="mb-10 text-gray-500">Klinik Pratama Inggit Garnasih ramah lansia adalah Klinik Pratama yang didirikan sebagai komitmen Pemerintah Jawa Barat terhadap keluarga Inggit Garnasih. Klinik Pratama Inggit Garnasih juga didirikan atas inisiasi Gubernur Jawa Barat periode 2018-2023 yakni Bapak Dr. H. Mochamad Ridwan Kamil S.T., M.U.D., Bersama Badan Amil Zakat (Baznas) Jawa Barat dan Bank bjb dalam mewujudkan Program Nyaah Ka Kolot (PNKK) sekaligus amanah Ibu Inggit Garnasih yang semasa hidupnya ingin mendirikan klinik untuk memuliakan para lansia.</p>
+                  <p className="mt-10 text-gray-500">Klinik Pratama Inggit Garnasih berlokasi di Jalan Flores no. 6, Kel. Citarum, Kota Bandung. Adapun layanan yang dimiliki adalah Layanan Poli Umum, Laboratorium, Instalasi Farmasi, Hipnoterapi, (Vaksin Homecare,Sport Massage) dan tentunya Layanan Fisioterapi dan Hidroterapi sebagai layanan unggulan. Layanan kesehatan Klinik Inggit Garnasih akan terus dikembangkan untuk memenuhi kebutuhan kesehatan masyarakat.</p>
               </div>
               <div className="grid grid-cols-2 gap-4 mt-8">
                   <img className="w-full rounded-lg animate-fade-right animate-once animate-delay-100 animate-ease-in" src={fasilitas9} alt="office content 1"/>
@@ -26,10 +26,8 @@ export default function ProfileContent() {
 
             <div className="mt-10">
               <div className="sm:text-md text-gray-500">
-                <p className="mt-4">
-                  Klinik dengan pelayanan ramah lansia mulai saat kedatangan pasien, apabila pasien dalam kondisi sulit berjalan maka akan dibantu oleh petugas dengan menggunakan kursi roda, begitupun dengan fasilitas lainnya seperti tidak adanya tangga untuk memudahkan mobilitas pasien lansia, pegangan besi didalam toilet untuk meminimalisir kecelakaan karena terjatuh, serta harga yang lebih terjangkau untuk pasien lansia. Pelayanan kami terhadap pasien lansia adalah seperti merawat orang tua sendiri. Namun demikian, Klinik Pratama Inggit Garnasih juga tidak hanya melayani pasien lansia, namun juga pasien semua umur dimulai dari anak-anak, remaja, dewasa pun bisa berobat dan melakukan fisioterapi di Klinik Inggit Garnasih.                 </p>
-                <p className="mt-4">
-                  Kami mengedepankan pelayanan yang hangat dan ramah, suasana hommy, fasilitas Kesehatan yang lengkap dan modern.</p>
+                <p className="mt-4">Mengusung tagline ramah lansia, Klinik Pratama Inggit Garnasih memberikan pelayanan yang memprioritaskan kenyamanan dan keamanan pasien lansia, dimulai saat kedatangan pasien, apabila pasien dalam kondisi sulit berjalan maka akan dibantu oleh petugas dengan menggunakan kursi roda. Tidak adanya tangga untuk memudahkan mobilitas pasien lansia, adanya pegangan besi dan karpet anti licin didalam toilet untuk meminimalisir kecelakaan karena terjatuh, serta tarif yang lebih terjangkau untuk pasien lansia. Pelayanan kami terhadap pasien lansia adalah seperti merawat orang tua sendiri. Namun demikian, Klinik Pratama Inggit Garnasih juga tetap melayani pasien semua umur dimulai dari anak-anak, remaja, dewasa pun bisa berobat dan melakukan fisioterapi di Klinik Inggit Garnasih.</p>                 
+                <p className="mt-4">Kami mengedepankan pelayanan yang hangat dan ramah, suasana hommy, fasilitas kesehatan yang lengkap dan modern.</p>
               </div>
               
               {/* alamat */}
@@ -117,7 +115,7 @@ export default function ProfileContent() {
               {/* supported by */}
             <div className="py-6">
               <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">Trusted by the world’s most innovative teams</h2>
+                <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">Support by</h2>
                 <div className="mx-auto mt-10 grid max-w-lg grid-cols-3 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                   <img className="col-span-1 max-h-24 w-full object-contain lg:col-span-1" src={baznas} alt="Transistor" width={258} height={148}/>
                   <img className="col-span-1 max-h-24 w-full object-contain lg:col-span-1" src={bjb} alt="Reform" width={258} height={348}/>
